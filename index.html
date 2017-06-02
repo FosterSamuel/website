@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Front-End Web Developer - Samuel Foster</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <meta name="author" content="Samuel Foster">
+        <meta name="description" content="Front-End Web Developer providing efficient web design and web development solutions.">
+
+        <link href='css/main.min.css' rel="stylesheet">
+    </head>
+    <body>
+    	<header class='hero'>
+        	<h1 class='hidden'>Samuel Foster</h1>
+            <p class="hero-intro">I design and build websites.</p>
+            <nav class="navigation">
+                <h2 class="hidden">Site Navigation</h2>
+                <ul class="navigation-bar">
+                    <li class="navigation-direction"><a class="navigation-anchor" href="#work">Work</a></li>
+                    <li class="navigation-direction"><a class="navigation-anchor" href="#about">About</a></li>
+                    <li class="navigation-direction"><a class="navigation-anchor" href="#process">Method</a></li>       
+                    <li class="navigation-direction"><a class="navigation-anchor" href="#hireme">Hire</a></li>
+                </ul>
+            </nav>
+    	</header>
+    	<div class='cardholder' id="work">
+            <h2 class='cardholder-title hidden'>Projects</h2>
+            <div class='projectCardContainer-PokerStaples'>
+                <h3 class='hidden'>PokerStaples</h3>
+                <a class='projectCard-link' href="https://pokerstaples.com/" target="_blank">
+                    PokerStaples
+                    <div class='projectCard-descriptionContainer'>
+                        <h4 class="projectCard-linkTitle">PokerStaples</h4>
+                        <p class="projectCard-linkDescription">Design + Development</p>
+                    </div>
+                </a>
+            </div>
+            <div class='projectCardContainer-MerchantM'>
+                <h3 class='hidden'>The Merchant M</h3>
+                <a class='projectCard-link' href="http://www.themerchantm.com/" target="_blank">
+                    The Merchant M
+                    <div class='projectCard-descriptionContainer'>
+                        <h4 class="projectCard-linkTitle">The Merchant M</h4>
+                        <p class="projectCard-linkDescription">Design + Development</p>
+                    </div>
+                </a>
+            </div>
+            <div class='projectCardContainer-WhatToDo hidden'>
+                <h3 class='hidden'>What-To-Do</h3>
+                <a class='projectCard-link' href="http://www.fostersamuel.com/what-to-do" target="_blank">
+                    What-To-Do 
+                    <div class='projectCard-descriptionContainer'>
+                        <h4 class="projectCard-linkTitle">What-To-Do</h4>
+                        <p class="projectCard-linkDescription">Design + Development</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class='info' id="about">
+            <a class='hidden info-resume'>View Resume</a>
+            <img class="info-face" src="media/profile_picture_optimized_min.jpg" width="1224" height="1220" alt="Picture of Samuel Foster"/>
+            <p class='info-me hidden'>H </p>
+            <p class="info-me" >
+                Front-End Developer from California. You can find me on <a class="info-socialLink" href="http://www.twitter.com/samuelfosterweb" target="_blank">Twitter</a> and <a class="info-socialLink" href="https://www.github.com/fostersamuel" target="_blank">GitHub</a> or reach me by <a href="mailto:samuelfosterweb@gmail.com">e-mail.</a>
+            </p>
+            <p class="info-me">
+            I also enjoy reading, writing, running, and competitive typing.
+            </p>
+
+        </div>
+        <section class="process" id="process">
+            <h3 class="hidden">Websites need:</h3>
+            <section class="process-ingredients">
+                <h4 class="hidden">Clean ingredients</h3>
+                <span class="process-ingredientsTitle">Websites need clean ingredients.</span>
+                <p class="process-ingredientsDescription">No templates. No junk. I build on the core components of HTML, CSS, and JavaScipt. I add other technologies if needed, but I do not waver on the importance of custom work.</p>
+            </section>
+            <section class="process-purpose">
+                <h4 class="hidden">Direction</h3>
+                <span class="process-purposeTitle">Websites need purpose.</span>
+                <p class="process-purposeDescription">If this is how confused your vistors look, that is a problem. I do not let websites waste people's time. I craft them with intent in every step of the design process. </p>
+            </section>
+            <section class="process-action">
+                <h4 class="hidden">Action</h4>
+                <span class="process-actionTitle">Websites need action.</span>
+                <p class="process-actionDescription">Whether you are making a blog or a store, you need the right pieces working together. I work with you to find and build the connections that fit your situation. You get to spend time doing what you enjoy.</p>
+            </section>
+        </section>
+        <section class="hireme" id='hireme'>
+            <h3 class="hidden">Hire Me</h3>
+            <p class="hireme-description">Let's talk websites.</p>
+            <form class="hireme-contact" action="https://formspree.io/samuelfosterweb@gmail.com"
+                  method="POST">
+                <input class="hireme-contactName" type="text" name="name" placeholder="Name">
+                <input class="hireme-contactEmail" type="email" name="_replyto" placeholder="Email Address">
+                <textarea class="hireme-contactMessage" type="text" cols="30" rows="6" name="message" placeholder="Message"></textarea>
+                <input class="hireme-send" type="submit" value="send message">
+            </form>
+        </section>
+    </body>
+</html>
