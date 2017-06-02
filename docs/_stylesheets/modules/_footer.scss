@@ -1,0 +1,28 @@
+.info {
+	margin-top: 5rem;
+	padding: 1rem 2rem 5rem 2rem;
+}
+
+.info-face {
+    width: 10ch;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.info-header {
+	text-align: center;
+	margin: 0;
+}
+.info-me {
+    display: block;
+    margin: 0;
+    text-align: center;
+    a {
+        font-weight: bold;
+        border-bottom: 2px solid orangered;
+    }
+}

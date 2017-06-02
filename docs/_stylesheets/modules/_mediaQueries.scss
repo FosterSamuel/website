@@ -1,0 +1,21 @@
+@media screen and (min-width: $res-tablet) {
+    ::selection {
+        background: $selection-color;
+        color: white;
+    }
+    ::-moz-selection {  
+        background: $selection-color;
+        color: white;
+    }
+    
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        font-size: 125%;
+    }
+
+    @import "../modules/desktop_siteNavigation";
+    @import "../modules/desktop_post";
+}

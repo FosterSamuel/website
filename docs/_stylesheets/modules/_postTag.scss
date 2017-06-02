@@ -1,0 +1,28 @@
+*[class^="postTag"] {
+	padding: .25rem;
+	border-radius: 5px;
+	width: 10ch;
+	text-align: center;
+	display: inline-block;
+	font-size: .5rem;
+	color: white;
+	font-weight: bold;
+	box-sizing: border-box;
+	margin-bottom: 2rem;
+}
+
+.postTag-Personal {
+	background: orangered;
+}
+
+.postTag-Web {
+	background: #0087FF;
+}
+
+.postTag-2016 {
+	background: #65CC9F;
+}
+
+.postTag-2017 {
+	background: #405DEC;	
+}

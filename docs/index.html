@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+
+<h2 class="hidden">Latest Posts</h2>
+{% for post in site.posts%}
+		{% if post.chronological == true %}
+		<section class="post">
+			<h3 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+			
+			<time class="post-time">{{ post.date | date: "%-d %B %Y" | upcase }}</time>
+
+			<p class="post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
+			<a href="{{ post.url | prepend: site.baseurl }}" class="post-readMore">read . . .</a>
+		</section>
+		{% endif %}
+{% endfor %}
+
+		<ul class="post-list hidden">
+{% for post in site.posts offset: 1%}
+		{% if post.chronological == true %}
+			
+			
+			
+			<li class="postUnit"><time class="postUnit-time">{{ post.date | date: "%-d %b %Y" | upcase }}</time><a href="{{ post.url | prepend: site.baseurl }}" class="postUnit-link">{{ post.title }}</a></li>
+		{% endif %}
+{% endfor %}
+		</ul>
+
+<p class="hidden">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
