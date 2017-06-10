@@ -7,7 +7,7 @@ categories: 2017 june personal
 tagList: {2017, Personal}
 slug: first-year
 chronological: TRUE
-cardDescription: one year of school
+cardDescription: Where did the time go?
 cardImage: https://www.fostersamuel.com/blog/media/merchantm.png
 ---
 
