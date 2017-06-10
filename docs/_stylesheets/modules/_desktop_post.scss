@@ -1,4 +1,19 @@
+.post {
+	text-align: left;
+}
+
 .post-title {
 	font-size: 3rem;
 	margin-bottom: 1.5rem;
+}
+
+.post-writtenLink {
+    transition: all 200ms ease-in;
+    transition-property: color, border-bottom;
+    border-bottom: 3px solid rgba(1, 1, 1, 0.2);
+    color: rgba(20, 34, 46, 0.85); 
+   	&:hover {
+    	border-bottom: 3px solid orangered;
+    	color: black; 
+    }
 }

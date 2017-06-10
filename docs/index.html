@@ -1,10 +1,7 @@
 ---
 layout: default
 ---
-
-
-<h2 class="hidden">Latest Posts</h2>
-{% for post in site.posts%}
+{% for post in site.posts limit: 1%}
 		{% if post.chronological == true %}
 		<section class="post">
 			<h3 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
@@ -17,12 +14,9 @@ layout: default
 		{% endif %}
 {% endfor %}
 
-		<ul class="post-list hidden">
-{% for post in site.posts offset: 1%}
+		<ul class="post-list">
+{% for post in site.posts %}
 		{% if post.chronological == true %}
-			
-			
-			
 			<li class="postUnit"><time class="postUnit-time">{{ post.date | date: "%-d %b %Y" | upcase }}</time><a href="{{ post.url | prepend: site.baseurl }}" class="postUnit-link">{{ post.title }}</a></li>
 		{% endif %}
 {% endfor %}
