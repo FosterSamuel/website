@@ -7,6 +7,8 @@ categories: 2017 june personal
 tagList: {2017, Personal}
 slug: first-year
 chronological: TRUE
+cardDescription: one year of school
+cardImage: https://www.fostersamuel.com/blog/media/merchantm.png
 ---
 
 My first year at Cal Poly Pomona is done. I finished ten courses, learned how to balance time, ate new foods, and met interesting people. 
