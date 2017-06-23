@@ -1,7 +1,7 @@
 .siteNavigation {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 0 1em;
+	padding: 0 20px;
 }
 
 .siteNavigation-home {
@@ -19,7 +19,7 @@
 	display: none;
 	width: 100%;
 	height: 40vh;
-	padding: 5vh 0;
+	padding: $base-line-height 0;
 	box-sizing: border-box;
 	background: white;
 }

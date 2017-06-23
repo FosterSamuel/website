@@ -1,0 +1,34 @@
+.now {
+	padding: 0 20px;
+	max-width: 60ch;
+	box-sizing: none;
+	margin: 0 auto $base-line-height*2 auto;
+	text-align: center;
+}
+
+.now-date {
+	color: #adadad;
+	display: block;
+	margin-bottom: $base-line-height;
+}
+
+.now-details {
+	text-align: left;
+}
+
+.now-list {
+	list-style: square;
+	padding: 0 20px;
+	margin-top: -$base-line-height;
+	margin-bottom: $base-line-height;
+}
+
+.now-listItem {
+	text-align: left;
+	text-indent: 1rem;
+}
+
+.now-link {
+	border-bottom: 2px solid orangered;
+	font-weight: bold;
+}
