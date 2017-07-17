@@ -1,2 +1,1 @@
-# netlifyPlat
-Testing something.
+Home on the web.
