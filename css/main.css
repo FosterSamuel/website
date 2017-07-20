@@ -445,7 +445,7 @@ div[class*="projectCardContainer"] {
     margin-bottom: 4rem;
     padding: 0; }
 
-  div[class*="projectCardContainer"] {
+  section[class*="projectCardContainer"] {
     width: calc(100%/2);
     height: 50vh;
     float: left;
