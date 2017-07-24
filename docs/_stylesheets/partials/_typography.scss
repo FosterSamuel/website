@@ -46,6 +46,10 @@ html {
     font-family: sans-serif;
 }
 
+main {
+    display: block;
+}
+
 body {
     text-rendering: optimizeLegibility;
     font-family:$body-fonts;
@@ -56,16 +60,15 @@ p {
     margin: 0;
     display: block;
     margin-bottom: 2rem;
-    hyphens: auto;
-    word-break: break-all;
     
     /* Non standard for webkit */
     word-break: break-word;
+    -ms-word-break:break-word;
     
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 p ~ .highlighter-rouge {

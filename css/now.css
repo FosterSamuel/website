@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
@@ -32,6 +33,9 @@ html {
   line-height: 1.6;
   font-family: sans-serif; }
 
+main {
+  display: block; }
+
 body {
   text-rendering: optimizeLegibility;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -41,13 +45,12 @@ p {
   margin: 0;
   display: block;
   margin-bottom: 2rem;
-  hyphens: auto;
-  word-break: break-all;
   /* Non standard for webkit */
   word-break: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto; }
+  -ms-word-break: break-word;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
 
 p ~ .highlighter-rouge {
   margin-top: -1.2rem; }
@@ -284,7 +287,8 @@ ul {
     color: #2F0D28; }
 
   .post {
-    text-align: left; }
+    text-align: left;
+    padding: 0; }
 
   .post-title {
     font-size: 2rem;

@@ -38,7 +38,7 @@ Friendship at college has many levels. The best measurement is how we react whil
  
 ### Work
  
-Work, however, can be measured. I completed two web projects. The first is <a class="post-writtenLink" target="_blank" href='https://www.themerchantm.com'>MerchantM</a>, a branding site. Built on HTML, SCSS, and JavaScript, it loads in under one second on most internet speeds. 
+Work, however, can be measured. I completed two web projects. The first is <a class="post-writtenLink" target="_blank" href='https://www.themerchantm.com'>MerchantM</a>, a social media company site. Built on HTML, SCSS, and JavaScript, it loads in under one second on most internet speeds. 
  
 <figure class="post-figure">
 	<img class="post-figureImage" alt="Screenshot of TheMerchantM.com" width="auto" height="200px" src="../media/merchantm.png">
