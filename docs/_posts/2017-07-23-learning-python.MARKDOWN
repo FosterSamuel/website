@@ -7,7 +7,7 @@ categories: 2017 july webdev python
 tagList: {2017, WebDev}
 slug: learning-python-data
 chronological: TRUE
-cardDescription: Theory on Learning a Secondary Computer Language
+cardDescription: Theory On Learning Additional Computer Languages
 cardImage: https://www.fostersamuel.com/blog/media/libbasic.png
 ---
 
