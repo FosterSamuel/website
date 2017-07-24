@@ -28,7 +28,7 @@ a {
   position: relative; }
 
 html {
-  font-size: 16px;
+  font-size: 21px;
   line-height: 1.6;
   font-family: sans-serif; }
 
@@ -49,6 +49,9 @@ p {
   -ms-hyphens: auto;
   hyphens: auto; }
 
+p ~ .highlighter-rouge {
+  margin-top: -1.2rem; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
@@ -60,13 +63,13 @@ h1 {
   font-size: 1.802em; }
 
 h2 {
-  font-size: 1.778rem;
-  line-height: 3.2rem;
+  font-size: 1.378rem;
+  line-height: 2.4rem;
   margin-top: 1rem; }
 
 h3 {
-  font-size: 1.778rem;
-  line-height: 3.2rem;
+  font-size: 1.378rem;
+  line-height: 2.4rem;
   margin-top: 1.5rem; }
 
 h4 {
@@ -284,7 +287,7 @@ ul {
     text-align: left; }
 
   .post-title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem; }
 
   .post-writtenLink {

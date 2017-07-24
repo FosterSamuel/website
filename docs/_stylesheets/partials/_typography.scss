@@ -20,8 +20,8 @@ $type-settings: (
     line-height: $base-line-height * 2
   ),
   2: (
-    font-size: 1.778rem,
-    line-height: $base-line-height * 2
+    font-size: 1.378rem,
+    line-height: $base-line-height * 1.5
   )
 );
 
@@ -41,7 +41,7 @@ $type-settings: (
 }
 
 html {
-    font-size: 16px;
+    font-size: 21px;
     line-height: 1.6;
     font-family: sans-serif;
 }
@@ -68,6 +68,9 @@ p {
     hyphens: auto;
 }
 
+p ~ .highlighter-rouge {
+    margin-top: $base-line-height * -.75;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-fonts;

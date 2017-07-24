@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Samuel Foster">
+	<meta name="theme-color" content="#fff">
+	<meta name="twitter:title" content="Learning Python: Basic Data">
+	<meta name="description" content="">
+	<meta property="og:site_name" content="https://www.fostersamuel.com/blog/">
+	<meta property="og:email" content="samuelfosterweb@gmail.com">
+	<meta property="og:type" content="blog">
+	<meta property="twitter:account_id" content="3449365214">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="https://www.fostersamuel.com/blog/" />
+	<meta name="twitter:title" content="Learning Python: Basic Data" />
+	<meta name="twitter:description" content="Theory on Learning a Secondary Computer Language" />
+	<meta name="twitter:image" content="https://www.fostersamuel.com/blog/media/libbasic.png" />
+
+
+	<title>Learning Python: Basic Data</title>
+
+	<link rel="icon" type="image/x-icon" href="../media/favicon.png">
+
+	<link rel="stylesheet" href="../css/base.css" type="text/css">
+	<link rel="canonical" href="http://localhost:4000/blog/learning-python-data/">
+</head>
+
+<body>
+	<header class="siteNavigation">
+	<h1 class="siteNavigation-home"><a href="http://localhost:4000/blog">Samuel Foster</a></h1>
+		<label class="siteNavigation-menuLabel" for="menuToggle">Menu</label>
+		<input class="siteNavigation-menuToggle" type="checkbox" id="menuToggle"></input>
+		<nav class="siteNavigation-links">
+			<h2 class="hidden">Site Navigation</h2>
+			<a href="https://www.fostersamuel.com/blog" class="siteNavigation-link">HOME</a>
+			<a href="https://www.fostersamuel.com/" class="siteNavigation-link">PORTFOLIO</a>
+			<a href="https://www.fostersamuel.com/#about" class="siteNavigation-link">ABOUT</a>
+			<a href="https://www.fostersamuel.com/now" class="siteNavigation-link">NOW</a>
+		</nav>
+</header>
+	<main>
+		<article class="post">
+			<h2 class="post-title">Learning Python: Basic Data</h2>
+<time class="post-time">23 JULY 2017</time>
+<p>Every six months I read my old code. I try to decipher what a variable’s purpose was or what a particular loop did. After years of not writing in <em>Liberty BASIC</em>, I cannot answer these curiosities. The lack of answers in one of my largest projects, a text-based RPG, still gets to me.</p>
+
+<figure class="post-figure">
+	<img class="post-figureImage" alt="Frustrating, poorly-written variables inside of the Liberty BASIC Editor" width="auto" height="200px" src="../media/libbasic.png" />
+	<figcaption class="post-figureCaption">Uh, Samuel...which bonus is tied to which stat?</figcaption>
+</figure>
+
+<p>Pain to my nostalgic heart sharpens me for when the time is right to learn a new language. But it’s never the right time. I should have learned Python a long time ago. I want to learn Python with respect to prior mistakes and current experience.</p>
+
+<p>I believe all programming languages are composed of three linguistic parts: <strong>data</strong>, <strong>action</strong>, and <strong>conventions</strong>. Some would argue that “display” or “input” can be parts, but they are defined within the broad idea of action. Action also overlaps with the modification and removal of data, leaving a precise definition for data as only the storage of itself.</p>
+
+<p>Every language, in my imagination, is a floating box that can hold <em>data</em>. If commands are written in line with <em>conventions</em>, the box performs <em>actions</em> that create, modify, or display data. In Python’s case, this box is an interpreted box and not a compiled one. You do not need me to tell you <a href="https://www.youtube.com/watch?v=UPZvzlfsiaY" class="post-writtenLink" target="_blank">how to start this box.</a> I want to work with the box by first learning its specific way of data storage.</p>
+
+<p>For extra accountability, I will study these parts by talking to myself. Well, no, not really – you’re here too. Hello! These posts are not tutorials, but they serve as my idea on how to approach a programming language if you have already learned more than one.</p>
+
+<p><em>Note: Python 3.x is the only release used in this post. Some bits do not work in Python 2.x.</em></p>
+
+<h3 id="storing-basic-data">Storing Basic Data</h3>
+
+<p>I need to store data. First, how do I store no data? Python requires a pound sign before a comment. I can also use the keyword <code class="highlighter-rouge">None</code> to represent null data.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="c"># I am storing  these words but only in the file itself. Welp.</span>
+  <span class="n">emptyVariable</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre>
+</div>
+
+<p>How do I store data that will not be ignored? Python splits basic data into five categories: Boolean, Numeric, Sequence, Sets, and Mappings.</p>
+
+<p><strong>Boolean</strong> data is straightforward. The only quirk is that Python capitalizes <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code> literals.</p>
+
+<p>Python stores <strong>Numeric</strong> data as an <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">float</code>, or a <code class="highlighter-rouge">complex</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">isTheEarthFlat</span> <span class="o">=</span> <span class="bp">False</span>
+  <span class="n">howManyRoadsToFollow</span> <span class="o">=</span> <span class="mi">44</span>
+  <span class="n">estimatedPie</span> <span class="o">=</span> <span class="mf">3.1415</span>
+  <span class="n">zigZag</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</code></pre>
+</div>
+
+<p><strong>Sequence</strong> data fits in a <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">tuple</code>, <code class="highlighter-rouge">bytes</code>, <code class="highlighter-rouge">byte array</code>, or a <code class="highlighter-rouge">str</code>. A <code class="highlighter-rouge">list</code> holds more than one type of data, and a <code class="highlighter-rouge">tuple</code> is an immutable list. Lists of integers between 0 and 255 can be stored in a <code class="highlighter-rouge">byte array</code> or an immutable <code class="highlighter-rouge">bytes</code>. Unicode characters, such as the letters on this page, belong in a <code class="highlighter-rouge">str</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">favoriteFoods</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Apples'</span><span class="p">,</span> <span class="s">'Spaghetti'</span><span class="p">,</span> <span class="s">'Bagels'</span><span class="p">]</span>
+
+  <span class="c"># A tuple needs a comma. Strict, right?</span>
+  <span class="n">safeDrinks</span> <span class="o">=</span> <span class="p">(</span><span class="s">'Water'</span><span class="p">,)</span> 
+
+  <span class="c"># Without commands, they become lists</span>
+  <span class="n">funNumbers</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">255</span><span class="p">])</span> 
+  <span class="n">foreverFunNumbers</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
+
+  <span class="n">strMessage</span> <span class="o">=</span> <span class="s">"Hello, reader!"</span>
+</code></pre>
+</div>
+
+<p><strong>Set</strong> data, which is unordered, can be stored in a <code class="highlighter-rouge">set</code> or a <code class="highlighter-rouge">frozen set</code>. Each one behaves as a mathematical set.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="c"># Guess which set type is immutable.</span>
+
+  <span class="n">placesToGo</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Italy"</span><span class="p">,</span> <span class="s">"Greece"</span><span class="p">,</span> <span class="s">"Italy"</span><span class="p">}</span> 
+  <span class="n">placesYouWillNeverGo</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s">"Venus"</span><span class="p">})</span>
+
+  <span class="c"># Italy will be removed from the first set.</span>
+  <span class="c"># The set has simple notation, </span>
+  <span class="c"># but the frozen set doesn't. Must've got the cold shoulder.</span>
+</code></pre>
+</div>
+<p>For <strong>Mapping</strong> data, Python uses a dictionary. A dictionary, or <code class="highlighter-rouge">dict</code>, maps one piece of data to another using a semicolon.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">value</span> <span class="o">=</span> <span class="p">{</span><span class="s">"mead"</span> <span class="p">:</span> <span class="mi">1400</span><span class="p">,</span> <span class="s">"sword"</span> <span class="p">:</span> <span class="mi">5000</span><span class="p">}</span>
+  <span class="n">places</span> <span class="o">=</span> <span class="p">{</span><span class="s">"toGo"</span> <span class="p">:</span> <span class="p">{</span><span class="s">"Italy"</span><span class="p">},</span> <span class="s">"toNeverGo"</span> <span class="p">:</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s">"Mars"</span><span class="p">})}</span>
+</code></pre>
+</div>
+
+<p>One more idea splits data types. Immutable data cannot change in place. For example, no new elements can be added to a <code class="highlighter-rouge">frozen set</code>. Mutable data, however, is not limited.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Immutable</th>
+      <th>. . . . .</th>
+      <th>Mutable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">int</code></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">byte array</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">float</code></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">list</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">complex</code></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">set</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">str</code></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">dict</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">bytes</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tuple</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">frozen set</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-done">Data Done</h3>
+
+<p>I feel comfortable creating basic data in Python now. Complicated data can be built on these basic data types, but that will be covered in the next part: Python actions.</p>
+
+		</article>
+		<footer class='info'>
+    		<a class='hidden info-resume'>View Resume</a>
+    		<img class="info-face" src="../media/profile_picture_optimized_min.jpg" width="1224" height="1220" alt="Picture of Samuel Foster"/>
+            <h3 class="info-header">Samuel Foster</h3>
+            <p class="info-me" id="about">
+                Find me on <a class="info-socialLink" href="http://www.twitter.com/samuelfosterweb" target="_blank">Twitter</a> and <a class="info-socialLink" href="https://www.github.com/fostersamuel" target="_blank">GitHub</a>.
+            </p>
+</footer>
+	</main>
+</body>
+
+</html>
