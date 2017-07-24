@@ -18,7 +18,7 @@ Every six months I read my old code. I try to decipher what a variable's purpose
 	<figcaption class="post-figureCaption">Uh, Samuel...which bonus is tied to which stat?</figcaption>
 </figure>
 
-Pain to my nostalgic heart sharpens me for when the time is right to learn a new language. But it's never the right time. I should have learned Python a long time ago. I want to learn Python with respect to prior mistakes and current experience.
+Pain to my nostalgic heart sharpens me for when the time is right to learn a new language. But it's never the right time. I should have learned Python a long time ago. I want to learn Python with respect to prior mistakes and experiences.
 
 I believe all programming languages are composed of three linguistic parts: **data**, **action**, and **conventions**. Some would argue that "display" or "input" can be parts, but they are defined within the broad idea of action. Action also overlaps with the modification and removal of data, leaving a precise definition for data as only the storage of itself.
 
