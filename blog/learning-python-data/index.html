@@ -65,8 +65,8 @@
 
 <p>I need to store data. First, how do I store no data? Python requires a pound sign before a comment. I can also use the keyword <code class="highlighter-rouge">None</code> to represent null data.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="c"># I am storing  these words but only in the file itself. Welp.</span>
-  <span class="n">emptyVariable</span> <span class="o">=</span> <span class="bp">None</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># I am storing  these words but only in the file itself. Welp.</span>
+<span class="n">emptyVariable</span> <span class="o">=</span> <span class="bp">None</span>
 </code></pre>
 </div>
 
@@ -76,44 +76,44 @@
 
 <p>Python stores <strong>Numeric</strong> data as an <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">float</code>, or a <code class="highlighter-rouge">complex</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">isTheEarthFlat</span> <span class="o">=</span> <span class="bp">False</span>
-  <span class="n">howManyRoadsToFollow</span> <span class="o">=</span> <span class="mi">44</span>
-  <span class="n">estimatedPie</span> <span class="o">=</span> <span class="mf">3.1415</span>
-  <span class="n">zigZag</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">isTheEarthFlat</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">howManyRoadsToFollow</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">estimatedPie</span> <span class="o">=</span> <span class="mf">3.1415</span>
+<span class="n">zigZag</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
 </code></pre>
 </div>
 
 <p><strong>Sequence</strong> data fits in a <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">tuple</code>, <code class="highlighter-rouge">bytes</code>, <code class="highlighter-rouge">byte array</code>, or a <code class="highlighter-rouge">str</code>. A <code class="highlighter-rouge">list</code> holds more than one type of data, and a <code class="highlighter-rouge">tuple</code> is an immutable list. Lists of integers between 0 and 255 can be stored in a <code class="highlighter-rouge">byte array</code> or an immutable <code class="highlighter-rouge">bytes</code>. Unicode characters, such as the letters on this page, belong in a <code class="highlighter-rouge">str</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">favoriteFoods</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Apples'</span><span class="p">,</span> <span class="s">'Spaghetti'</span><span class="p">,</span> <span class="s">'Bagels'</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">favoriteFoods</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Apples'</span><span class="p">,</span> <span class="s">'Spaghetti'</span><span class="p">,</span> <span class="s">'Bagels'</span><span class="p">]</span>
 
-  <span class="c"># A tuple needs a comma. Strict, right?</span>
-  <span class="n">safeDrinks</span> <span class="o">=</span> <span class="p">(</span><span class="s">'Water'</span><span class="p">,)</span> 
+<span class="c"># A tuple needs a comma. Strict, right?</span>
+<span class="n">safeDrinks</span> <span class="o">=</span> <span class="p">(</span><span class="s">'Water'</span><span class="p">,)</span> 
 
-  <span class="c"># Without commands, they become lists</span>
-  <span class="n">funNumbers</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">255</span><span class="p">])</span> 
-  <span class="n">foreverFunNumbers</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
+<span class="c"># Without commands, they become lists</span>
+<span class="n">funNumbers</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">255</span><span class="p">])</span> 
+<span class="n">foreverFunNumbers</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">])</span>
 
-  <span class="n">strMessage</span> <span class="o">=</span> <span class="s">"Hello, reader!"</span>
+<span class="n">strMessage</span> <span class="o">=</span> <span class="s">"Hello, reader!"</span>
 </code></pre>
 </div>
 
 <p><strong>Set</strong> data, which is unordered, can be stored in a <code class="highlighter-rouge">set</code> or a <code class="highlighter-rouge">frozen set</code>. Each one behaves as a mathematical set.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="c"># Guess which set type is immutable.</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Guess which set type is immutable.</span>
 
-  <span class="n">placesToGo</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Italy"</span><span class="p">,</span> <span class="s">"Greece"</span><span class="p">,</span> <span class="s">"Italy"</span><span class="p">}</span> 
-  <span class="n">placesYouWillNeverGo</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s">"Venus"</span><span class="p">})</span>
+<span class="n">placesToGo</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Italy"</span><span class="p">,</span> <span class="s">"Greece"</span><span class="p">,</span> <span class="s">"Italy"</span><span class="p">}</span> 
+<span class="n">placesYouWillNeverGo</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s">"Venus"</span><span class="p">})</span>
 
-  <span class="c"># Italy will be removed from the first set.</span>
-  <span class="c"># The set has simple notation, </span>
-  <span class="c"># but the frozen set doesn't. Must've got the cold shoulder.</span>
+<span class="c"># Italy will be removed from the first set.</span>
+<span class="c"># The set has simple notation, </span>
+<span class="c"># but the frozen set doesn't. Must've got the cold shoulder.</span>
 </code></pre>
 </div>
 <p>For <strong>Mapping</strong> data, Python uses a dictionary. A dictionary, or <code class="highlighter-rouge">dict</code>, maps one piece of data to another using a semicolon.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">value</span> <span class="o">=</span> <span class="p">{</span><span class="s">"mead"</span> <span class="p">:</span> <span class="mi">1400</span><span class="p">,</span> <span class="s">"sword"</span> <span class="p">:</span> <span class="mi">5000</span><span class="p">}</span>
-  <span class="n">places</span> <span class="o">=</span> <span class="p">{</span><span class="s">"toGo"</span> <span class="p">:</span> <span class="p">{</span><span class="s">"Italy"</span><span class="p">},</span> <span class="s">"toNeverGo"</span> <span class="p">:</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s">"Mars"</span><span class="p">})}</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">value</span> <span class="o">=</span> <span class="p">{</span><span class="s">"mead"</span> <span class="p">:</span> <span class="mi">1400</span><span class="p">,</span> <span class="s">"sword"</span> <span class="p">:</span> <span class="mi">5000</span><span class="p">}</span>
+<span class="n">places</span> <span class="o">=</span> <span class="p">{</span><span class="s">"toGo"</span> <span class="p">:</span> <span class="p">{</span><span class="s">"Italy"</span><span class="p">},</span> <span class="s">"toNeverGo"</span> <span class="p">:</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s">"Mars"</span><span class="p">})}</span>
 </code></pre>
 </div>
 
@@ -168,7 +168,7 @@
 
 <h3 id="data-done">Data Done</h3>
 
-<p>I feel comfortable creating basic data in Python now. Complicated data can be built on these basic data types, but that will be covered in the next part: Python actions.</p>
+<p>I feel comfortable creating basic data in Python now. Complicated data can be built on these basic data types, but that will be covered in <a class="post-writtenLink" href="https://www.fostersamuel.com/blog/learning-python-action">the next post.</a></p>
 
 		</article>
 		<footer class='info'>

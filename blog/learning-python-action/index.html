@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Samuel Foster">
+	<meta name="theme-color" content="#fff">
+	<meta name="twitter:title" content="Learning Python: Basic Action">
+	<meta name="description" content="">
+	<meta property="og:site_name" content="https://www.fostersamuel.com/blog/">
+	<meta property="og:email" content="samuelfosterweb@gmail.com">
+	<meta property="og:type" content="blog">
+	<meta property="twitter:account_id" content="3449365214">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="https://www.fostersamuel.com/blog/" />
+	<meta name="twitter:title" content="Learning Python: Basic Action" />
+	<meta name="twitter:description" content="What is data without action?" />
+	<meta name="twitter:image" content="https://www.fostersamuel.com/blog/media/libbasic_drone.png" />
+
+
+	<title>Learning Python: Basic Action</title>
+
+	<link rel="icon" type="image/x-icon" href="../media/favicon.png">
+
+	<link rel="stylesheet" href="../css/base.css" type="text/css">
+	<link rel="canonical" href="http://localhost:4000/blog/learning-python-action/">
+</head>
+
+<body>
+	<header class="siteNavigation">
+	<h1 class="siteNavigation-home"><a href="http://localhost:4000/blog">Samuel Foster</a></h1>
+		<label class="siteNavigation-menuLabel" for="menuToggle">Menu</label>
+		<input class="siteNavigation-menuToggle" type="checkbox" id="menuToggle"></input>
+		<nav class="siteNavigation-links">
+			<h2 class="hidden">Site Navigation</h2>
+			<a href="https://www.fostersamuel.com/blog" class="siteNavigation-link">HOME</a>
+			<a href="https://www.fostersamuel.com/" class="siteNavigation-link">PORTFOLIO</a>
+			<a href="https://www.fostersamuel.com/#about" class="siteNavigation-link">ABOUT</a>
+			<a href="https://www.fostersamuel.com/now" class="siteNavigation-link">NOW</a>
+		</nav>
+</header>
+	<main>
+		<article class="post">
+			<h2 class="post-title">Learning Python: Basic Action</h2>
+<time class="post-time">4 AUGUST 2017</time>
+<p>Action dictates data and program flow. In my old <em>Liberty BASIC</em> programs, I feel lost in the action after years of not writing any.</p>
+
+<figure class="post-figure">
+  <img class="post-figureImage" alt="Picture of DRONE langauge commands I wrote inside of a math program I wrote in Liberty BASIC " width="auto" height="200px" src="../media/libbasic_drone.png" />
+  <figcaption class="post-figureCaption">Inside of my math program, I wrote a small language called DRONE.</figcaption>
+</figure>
+
+<p>Maybe one day I will learn it again, but for now, I am focused on Python.</p>
+
+<p>Without action, our data from <a target="_blank" class="post-writtenLink" href="https://www.fostersamuel.com/blog/learning-python-data">the last post</a> will sit and collect imaginary dust. To counter this would require ways to access, change, and use our data.</p>
+
+<h3 id="accessing-data">Accessing Data</h3>
+<p>In Python, <code class="highlighter-rouge">[]</code>s are used to access sequence data such as <code class="highlighter-rouge">list</code> and <code class="highlighter-rouge">dict</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">coolThings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Ice'</span><span class="p">,</span> <span class="s">'Snow'</span><span class="p">]</span>
+<span class="n">funCityByState</span> <span class="o">=</span> <span class="p">{</span><span class="s">"CA"</span> <span class="p">:</span> <span class="s">"Los Angeles"</span><span class="p">,</span> <span class="s">"VA"</span> <span class="p">:</span> <span class="s">"Sterling"</span><span class="p">,</span> <span class="s">"NC"</span> <span class="p">:</span> <span class="s">"New Bern"</span><span class="p">}</span>
+
+<span class="n">secondBest</span> <span class="o">=</span> <span class="n">coolThings</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">bestInVA</span> <span class="o">=</span> <span class="n">funCityByState</span><span class="p">[</span><span class="s">"VA"</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Sequence data is sliceable with <code class="highlighter-rouge">[begin:end]</code>. Either boundary can be left out to grab the rest of the list in that direction. The element at index <code class="highlighter-rouge">end</code> is not included.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">coolThings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Ice'</span><span class="p">,</span> <span class="s">'Snow'</span><span class="p">,</span> <span class="s">'Rain'</span><span class="p">,</span> <span class="s">'Water'</span><span class="p">]</span>
+
+<span class="n">bestThings</span> <span class="o">=</span> <span class="n">coolThings</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="c"># Grabs all elements after and including index 1 ("Snow")</span>
+
+<span class="n">comparableThings</span> <span class="o">=</span> <span class="n">coolThings</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="c"># Grabs all elements before index 3 ('Water')</span>
+</code></pre>
+</div>
+
+<p>New elements can be added to our sequences using <code class="highlighter-rouge">append()</code> for <code class="highlighter-rouge">list</code> and <code class="highlighter-rouge">[]</code> for <code class="highlighter-rouge">dict</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">listNames</span> <span class="o">=</span> <span class="p">[</span><span class="s">'coolThings'</span><span class="p">,</span> <span class="s">'bestThings'</span><span class="p">]</span>
+<span class="n">listNames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'comparableThings'</span><span class="p">)</span>
+
+<span class="n">flights</span> <span class="o">=</span> <span class="p">{</span><span class="s">"2016"</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">flights</span><span class="p">[</span><span class="s">'2017'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre>
+</div>
+
+<h3 id="modifying-data">Modifying Data</h3>
+<p>An eye into our Python box would be useful. The <code class="highlighter-rouge">print()</code> function shows data in a console. We can now see changes in data.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="c"># -&gt; 19</span>
+</code></pre>
+</div>
+<p>The <code class="highlighter-rouge">int</code> is supposedly immutable. What is happening here? The <code class="highlighter-rouge">age</code> variable points to a reference object that does not change. Any change to <code class="highlighter-rouge">age</code> creates a new reference object with that changed value. To see this behavior, we can check each object’s unique number using <code class="highlighter-rouge">id()</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<span class="c"># -&gt; 1862560144</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<span class="c"># -&gt; 1862560160</span>
+<span class="c"># age points to a new object now</span>
+
+
+<span class="c"># Lists are mutable, unlike int</span>
+<span class="c"># Mutable data does not juggle objects</span>
+<span class="n">coolList</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Ice"</span><span class="p">,</span> <span class="s">"Snow"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">coolList</span><span class="p">))</span>
+<span class="c"># -&gt; 48607480</span>
+
+<span class="n">coolList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">"Rain"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">coolList</span><span class="p">))</span>
+<span class="c"># -&gt; 48607480</span>
+<span class="c"># coolList points to the same object</span>
+</code></pre>
+</div>
+
+<p>There is an upside to this behavior. If you pass an immutable variable to a function that messes with it, the original variable will not be changed. This preserved immutability can be tested by writing our own functions.</p>
+
+<h3 id="functions">Functions</h3>
+
+<p>Python uses <code class="highlighter-rouge">def</code> to declare a function. Like most languages, arguments are comma-separated within the parantheses and <code class="highlighter-rouge">return</code> is used to return data.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">blipBleep</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s">"blip bleep!"</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">blipBleep</span><span class="p">())</span>
+</code></pre>
+</div>
+
+<p>To test the immutability of <code class="highlighter-rouge">int</code>, we can write a function that tries to alter one.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">addFive</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+  <span class="nb">input</span> <span class="o">=</span> <span class="nb">input</span> <span class="o">+</span> <span class="mi">5</span>
+
+<span class="n">ourInt</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">addFive</span><span class="p">(</span><span class="n">ourInt</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">ourInt</span><span class="p">)</span>
+<span class="c"># -&gt; 10</span>
+</code></pre>
+</div>
+
+<p>A common function to write is one that sorts a list of numbers. We need logic to sort numbers.</p>
+
+<h3 id="logic">Logic</h3>
+<p>Logic directs the flow of the program based on our data. The most common directors are <code class="highlighter-rouge">if</code> and <code class="highlighter-rouge">for</code> as well as their many variations. Python’s <code class="highlighter-rouge">if</code> statements require a colon, like functions, and use <code class="highlighter-rouge">==</code> for equality.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hey, this should print!"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"This should print too."</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"This one won't print. Welp."</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">for</code> loop in Python grabs from a range of elements using <code class="highlighter-rouge">in</code> rather than counting up to (or down from) a boundary.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">funWords</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Kerfuffle'</span><span class="p">,</span> <span class="s">'Alabaster'</span><span class="p">]</span>
+
+<span class="c"># word holds each element in the proposed list</span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">funWords</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="c"># -&gt; 'Kerfuffle' </span>
+<span class="c"># -&gt; 'Alabaster'</span>
+
+<span class="c"># You can even iterate through a string</span>
+<span class="n">place</span> <span class="o">=</span> <span class="s">"Venice"</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">place</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+
+<span class="c"># -&gt; "V"</span>
+<span class="c"># -&gt; "e"</span>
+<span class="c"># -&gt; "n"</span>
+<span class="c"># -&gt; "i"</span>
+<span class="c"># -&gt; "c"</span>
+<span class="c"># -&gt; "e"</span>
+</code></pre>
+</div>
+
+<p>To imitate boundary loops, the <code class="highlighter-rouge">range()</code> function proves useful. This style gives you the index of the element.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">funWords</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+<span class="c"># Note: range() function has exclusive end boundaries.</span>
+<span class="c">#       x never becomes 2.</span>
+
+
+<span class="c"># We can imitate stepping size with</span>
+<span class="c"># the third parameter in range()</span>
+
+<span class="k">for</span> <span class="n">evenNumber</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">evenNumber</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="sortnumbers">sortNumbers()</h3>
+
+<p>Let’s build a function that sorts numbers. The function should take in a list of numbers and sort order. Mutable data should not be altered. To achieve this, we will copy our input into a new variable <code class="highlighter-rouge">nums</code> using the <code class="highlighter-rouge">list()</code> function.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sortNumbers</span><span class="p">(</span><span class="n">numberList</span><span class="p">,</span> <span class="n">sortOrder</span><span class="p">):</span>
+  <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numberList</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>To go the <em>bubble sort</em> way, we need to compare each number to other numbers in the list. If one number is larger or smaller than another, depending on sort order, it will be swapped with the other number.</p>
+
+<p>First, we need a loop that grabs each number. The <code class="highlighter-rouge">len()</code> function returns the size of a list which is useful for our boundary loops.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sortNumbers</span><span class="p">(</span><span class="n">numberList</span><span class="p">,</span> <span class="n">sortOrder</span><span class="p">):</span>
+  <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numberList</span><span class="p">)</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">firstIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+</code></pre>
+</div>
+
+<p>The function needs a second loop of numbers for comparison. This one selects every number except the one we are already on.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sortNumbers</span><span class="p">(</span><span class="n">numberList</span><span class="p">,</span> <span class="n">sortOrder</span><span class="p">):</span>
+  <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numberList</span><span class="p">)</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">firstIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">secondIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">firstIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+</code></pre>
+</div>
+
+<p>Comparison can now take place, but the function should allow sorting from largest or from smallest. <code class="highlighter-rouge">sortOrder</code> is one of our parameters. If it <code class="highlighter-rouge">is 1</code>, sort by largest. Any other value will sort by smallest. The <code class="highlighter-rouge">else</code> director splits the function’s direction.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sortNumbers</span><span class="p">(</span><span class="n">numberList</span><span class="p">,</span> <span class="n">sortOrder</span><span class="p">):</span>
+  <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numberList</span><span class="p">)</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">firstIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">secondIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">firstIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">sortOrder</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c"># Sort by largest</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="c"># Sort by smallest</span>
+</code></pre>
+</div>
+
+<p>To sort by largest, the element at <code class="highlighter-rouge">firstIndex</code> should be swapped with the one at <code class="highlighter-rouge">secondIndex</code> when needed. We used a variable <code class="highlighter-rouge">tmp</code> to hold the value before switching the values.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sortNumbers</span><span class="p">(</span><span class="n">numberList</span><span class="p">,</span> <span class="n">sortOrder</span><span class="p">):</span>
+  <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numberList</span><span class="p">)</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">firstIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">secondIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">firstIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">sortOrder</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]:</span>
+          <span class="c"># firstIndex element is smaller?</span>
+          <span class="c"># Push it up the list</span>
+          <span class="n">tmp</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]</span>
+          <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span>
+          <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="c"># Sort by smallest</span>
+  <span class="k">return</span> <span class="n">nums</span>
+</code></pre>
+</div>
+
+<p>The same swap can be performed for sorting by smallest with a change of inequality sign.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sortNumbers</span><span class="p">(</span><span class="n">numberList</span><span class="p">,</span> <span class="n">sortOrder</span><span class="p">):</span>
+  <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">numberList</span><span class="p">)</span>
+  <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">firstIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">secondIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">firstIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">sortOrder</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]:</span>
+          <span class="n">tmp</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]</span>
+          <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span>
+          <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]:</span>
+          <span class="n">tmp</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]</span>
+          <span class="n">nums</span><span class="p">[</span><span class="n">secondIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span>
+          <span class="n">nums</span><span class="p">[</span><span class="n">firstIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+  <span class="k">return</span> <span class="n">nums</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">99</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sortNumbers</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="c"># -&gt; [3, 4, 8, 20, 22, 23, 45, 60, 99]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sortNumbers</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="c"># -&gt; [99, 60, 45, 23, 22, 20, 8, 4, 3]</span>
+</code></pre>
+</div>
+
+<p>Not the prettiest or fastest function, but it is worthwhile practice. A moment spent Google searching reveals Python has a built-in function called <code class="highlighter-rouge">sort()</code>. Fundamentals are important, and I plan to continue strengthening them, but many functions have already been written. How do we use these?</p>
+
+<h3 id="importing">Importing</h3>
+
+<p>To import, use the <code class="highlighter-rouge">import</code> keyword and the module name. The <code class="highlighter-rouge">dir()</code> function shows all functions of a module.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Built-in Module called 'math'</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
+<span class="c"># -&gt; *huge list of math functions*</span>
+</code></pre>
+</div>
+
+<p>You can also grab specific functions (or all using <code class="highlighter-rouge">*</code> as a wildcard) from a module using the <code class="highlighter-rouge">from</code> keyword.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># import sqrt() from math module</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">36</span><span class="p">))</span>
+<span class="c"># -&gt; 6.0</span>
+</code></pre>
+</div>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Basic tasks in Python such as accessing or changing data, creating functions, and using logic are now possible. I feel comfortable with the basics but digging deeper shows I cannot cover everything in one blog post. For example, I did not cover <code class="highlighter-rouge">class</code>, <code class="highlighter-rouge">del</code>, user input, <code class="highlighter-rouge">finally</code> and more.</p>
+
+<p>The next post will be about basic Python language conventions. While that wraps up the three basic linguistic parts, I will practice and write more Python. There is more to discover in this intuitive and inviting language.</p>
+
+		</article>
+		<footer class='info'>
+    		<a class='hidden info-resume'>View Resume</a>
+    		<img class="info-face" src="../media/profile_picture_optimized_min.jpg" width="1224" height="1220" alt="Picture of Samuel Foster"/>
+            <h3 class="info-header">Samuel Foster</h3>
+            <p class="info-me" id="about">
+                Find me on <a class="info-socialLink" href="http://www.twitter.com/samuelfosterweb" target="_blank">Twitter</a> and <a class="info-socialLink" href="https://www.github.com/fostersamuel" target="_blank">GitHub</a>.
+            </p>
+</footer>
+	</main>
+</body>
+
+</html>

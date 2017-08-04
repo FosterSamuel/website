@@ -3,8 +3,8 @@ layout: post
 title:  "Learning Python: Basic Data"
 date:   2017-07-23 14:30:00 -0800
 author: "Samuel Foster"
-categories: 2017 july webdev python
-tagList: {2017, WebDev}
+categories: 2017 july python
+tagList: {2017, Python}
 slug: learning-python-data
 chronological: TRUE
 cardDescription: Theory On Learning Additional Computer Languages
@@ -33,8 +33,8 @@ For extra accountability, I will study these parts by talking to myself. Well, n
 I need to store data. First, how do I store no data? Python requires a pound sign before a comment. I can also use the keyword `None` to represent null data.
 
 ```python
-  # I am storing  these words but only in the file itself. Welp.
-  emptyVariable = None
+# I am storing  these words but only in the file itself. Welp.
+emptyVariable = None
 ```
 
 How do I store data that will not be ignored? Python splits basic data into five categories: Boolean, Numeric, Sequence, Sets, and Mappings. 
@@ -44,45 +44,45 @@ How do I store data that will not be ignored? Python splits basic data into five
 Python stores **Numeric** data as an `int`, `float`, or a `complex`.
 
 ```python
-  isTheEarthFlat = False
-  howManyRoadsToFollow = 44
-  estimatedPie = 3.1415
-  zigZag = 3+4j
+isTheEarthFlat = False
+howManyRoadsToFollow = 44
+estimatedPie = 3.1415
+zigZag = 3+4j
 ```
 
 **Sequence** data fits in a `list`, `tuple`, `bytes`, `byte array`, or a `str`. A `list` holds more than one type of data, and a `tuple` is an immutable list. Lists of integers between 0 and 255 can be stored in a `byte array` or an immutable `bytes`. Unicode characters, such as the letters on this page, belong in a `str`.
 
 ```python
-  favoriteFoods = ['Apples', 'Spaghetti', 'Bagels']
+favoriteFoods = ['Apples', 'Spaghetti', 'Bagels']
 
-  # A tuple needs a comma. Strict, right?
-  safeDrinks = ('Water',) 
+# A tuple needs a comma. Strict, right?
+safeDrinks = ('Water',) 
 
-  # Without commands, they become lists
-  funNumbers = bytearray([0, 254, 255]) 
-  foreverFunNumbers = bytes([50, 25, 36])
+# Without commands, they become lists
+funNumbers = bytearray([0, 254, 255]) 
+foreverFunNumbers = bytes([50, 25, 36])
 
-  strMessage = "Hello, reader!"
+strMessage = "Hello, reader!"
 ```
 
 **Set** data, which is unordered, can be stored in a `set` or a `frozen set`. Each one behaves as a mathematical set.
 
 
 ```python
-  # Guess which set type is immutable.
+# Guess which set type is immutable.
 
-  placesToGo = {"Italy", "Greece", "Italy"} 
-  placesYouWillNeverGo = frozenset({"Venus"})
+placesToGo = {"Italy", "Greece", "Italy"} 
+placesYouWillNeverGo = frozenset({"Venus"})
 
-  # Italy will be removed from the first set.
-  # The set has simple notation, 
-  # but the frozen set doesn't. Must've got the cold shoulder.
+# Italy will be removed from the first set.
+# The set has simple notation, 
+# but the frozen set doesn't. Must've got the cold shoulder.
 ```
 For **Mapping** data, Python uses a dictionary. A dictionary, or `dict`, maps one piece of data to another using a semicolon.
 
 ```python
-  value = {"mead" : 1400, "sword" : 5000}
-  places = {"toGo" : {"Italy"}, "toNeverGo" : frozenset({"Mars"})}
+value = {"mead" : 1400, "sword" : 5000}
+places = {"toGo" : {"Italy"}, "toNeverGo" : frozenset({"Mars"})}
 ```
 
 One more idea splits data types. Immutable data cannot change in place. For example, no new elements can be added to a `frozen set`. Mutable data, however, is not limited.
@@ -100,4 +100,4 @@ Immutable | . . . . . | Mutable
 
 ### Data Done
 
-I feel comfortable creating basic data in Python now. Complicated data can be built on these basic data types, but that will be covered in the next part: Python actions.
+I feel comfortable creating basic data in Python now. Complicated data can be built on these basic data types, but that will be covered in <a class="post-writtenLink" href="https://www.fostersamuel.com/blog/learning-python-action">the next post.</a>
