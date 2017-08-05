@@ -14,7 +14,7 @@
 	margin-bottom: 1rem;
 }
 
-.post-time, .postUnit-time {
+.post-time {
 	display: block;
 	font-size: .85rem;
 	color: #9EABB3;
@@ -50,9 +50,10 @@
 
 .postUnit-time {
 	display: inline-block;
-	text-align: right;
-	width: 11ch;
+	width: 6ch;
+	font-size: .85rem;
 	margin-right: 1rem;
+	color: #9EABB3;
 }
 
 .post-list {
@@ -82,4 +83,9 @@
 	text-decoration: none;
 	font-weight: bold;
 	border-bottom: 3px solid orangered;
+}
+
+.post-listYear {
+	text-align: center;
+	color: #C5CDD2;
 }
