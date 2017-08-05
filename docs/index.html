@@ -15,15 +15,18 @@ layout: default
 {% endfor %}
 
 		{% for post in site.posts %}
-		  {% assign currentdate = post.date | date: "%Y" %}
-		  {% if currentdate != date %}
-		    {% unless forloop.first %}</ul>{% endunless %}
-		    <ul class=post-list>
-		    <h3 class="post-listYear" id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h3>
-		    {% assign date = currentdate %}
-		  {% endif %}
-		    <li class="postUnit"><time class="postUnit-time">{{ post.date | date: "%-d %b" | upcase }}</time><a href="{{ post.url | prepend: site.baseurl }}" class="postUnit-link">{{ post.title }}</a></li>
-		  {% if forloop.last %}</ul>{% endif %}
+		  {% if post.chronological == true %} 
+			  {% assign currentdate = post.date | date: "%Y" %}
+			  {% if currentdate != date %}
+			    {% unless forloop.first %}</ul>{% endunless %}
+			    <ul class=post-list>
+			    <h3 class="post-listYear" id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h3>
+			    {% assign date = currentdate %}
+			  {% endif %}
+			    <li class="postUnit"><time class="postUnit-time">{{ post.date | date: "%-d %b" | upcase }}</time><a href="{{ post.url | prepend: site.baseurl }}" class="postUnit-link">{{ post.title }}</a></li>
+			  {% if forloop.last %}</ul>{% endif %}
+			{% endif %}
 		{% endfor %}
+		
 
 <p class="hidden">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
