@@ -278,7 +278,7 @@ section[class*="projectCardContainer"] {
   background-position: center; }
 
 .process-action {
-  background-image: url("../media/excited_dark_v2.jpg");
+  background-image: url("../media/action_2.jpg");
   background-size: cover;
   background-position: center; }
 
@@ -548,13 +548,13 @@ section[class*="projectCardContainer"] {
     max-width: none; }
 
   .process-actionTitle {
-    padding: 10vh 10rem 0 10rem;
+    padding: 15vh 10rem 0 10rem;
     font-size: 2.5rem; }
 
   .process-actionDescription {
     padding: 10vh 50vw 25vh 10rem;
     max-width: none;
-    background: linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.7)); }
+    background: linear-gradient(rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.8)); }
 
   .hireme-description, .hireme-contact {
     max-width: 35ch;
