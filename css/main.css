@@ -27,6 +27,7 @@ body {
 
 p {
   max-width: 66ch;
+  margin: 0 0 1.5rem;
   line-height: 1.7;
   hyphens: auto;
   /* Non standard for webkit */
@@ -38,7 +39,9 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1.5rem; }
 
 h1 {
   font-size: 1.464em; }
@@ -148,15 +151,22 @@ ul {
   text-decoration: none;
   color: #c6c6c6; }
 
+.cardholder {
+  padding: 1.5rem 2rem 0 2rem; }
+
+.cardholder-title {
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #D8D8D8; }
+
 section[class*="projectCardContainer"] {
-  margin: 0 auto;
-  width: 100%;
-  height: 40vh;
+  margin: 0 auto 1.5rem auto;
   display: block;
   padding: 0;
   background-size: cover;
   background-position: bottom;
-  box-sizing: border-box; }
+  max-width: 40ch; }
 
 .projectCardContainer-MerchantM {
   background-image: url("../media/merchantm.PNG"); }
@@ -167,6 +177,9 @@ section[class*="projectCardContainer"] {
 .projectCardContainer-PokerStaples {
   background-image: url("../media/pstaples.PNG"); }
 
+.projectCardContainer-Linkello {
+  background-image: url("../media/linkello.PNG"); }
+
 .projectCard-link {
   text-decoration: none;
   padding: 0;
@@ -176,11 +189,10 @@ section[class*="projectCardContainer"] {
   width: 100%; }
 
 .projectCard-descriptionContainer {
-  height: 40vh;
   width: 100%;
   z-index: 100;
   box-sizing: border-box;
-  background: rgba(51, 51, 51, 0.7); }
+  background: rgba(51, 51, 51, 0.75); }
 
 .projectCard-linkTitle {
   display: block;
@@ -217,7 +229,7 @@ section[class*="projectCardContainer"] {
   color: #f7f7f7; }
 
 .info {
-  padding: 5vh 2rem; }
+  padding: 1.5rem 2rem; }
 
 .info-face {
   width: 10ch;
@@ -239,9 +251,11 @@ section[class*="projectCardContainer"] {
   display: block;
   max-width: 50ch;
   margin: 0 auto 2rem auto; }
-.info-me a {
+
+.info-socialLink {
   text-decoration: none;
   font-weight: bold;
+  hyphen: none;
   color: black;
   border-bottom: 2px solid orangered; }
 
@@ -344,6 +358,7 @@ section[class*="projectCardContainer"] {
   width: 80%; }
 
 .hireme-contactMessage {
+  resize: none;
   font-family: "Open Sans", sans-serif; }
 
 .hireme-send {
@@ -445,12 +460,18 @@ section[class*="projectCardContainer"] {
     margin-bottom: 4rem;
     padding: 0; }
 
+  .cardholder-title {
+    font-size: 0;
+    margin: 0;
+    display: none; }
+
   section[class*="projectCardContainer"] {
     width: calc(100%/2);
     height: 50vh;
     float: left;
     display: inline-block;
     margin-bottom: 0;
+    max-width: none;
     background-position: top; }
 
   .projectCard-link:hover .projectCard-linkTitle {
