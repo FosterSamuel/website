@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learning Python: Basic Data"
+title:  "Learning Python: Data"
 date:   2017-07-23 14:30:00 -0800
 author: "Samuel Foster"
 categories: 2017 july python

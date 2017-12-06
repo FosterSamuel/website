@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Learning Python: Basic Action"
+title:  "Learning Python: Action"
 date:   2017-08-04 15:30:00 -0800
 author: "Samuel Foster"
-categories: 2017 august webdev python
+categories: 2017 august python
 tagList: {2017, Python}
 slug: learning-python-action
 chronological: TRUE
