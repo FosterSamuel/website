@@ -1,18 +1,19 @@
 ---
 layout: default
 ---
-{% for post in site.posts limit: 1%}
-		{% if post.chronological == true %}
-		<section class="post">
-			<h3 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-			
-			<time class="post-time">{{ post.date | date: "%-d %B %Y" | upcase }}</time>
+		{% for post in site.posts %}
+				{% if post.chronological == true %}
+				<section class="post">
+					<h3 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+					
+					<time class="post-time">{{ post.date | date: "%-d %B %Y" | upcase }}</time>
 
-			<p class="post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
-			<a href="{{ post.url | prepend: site.baseurl }}" class="post-readMore">read . . .</a>
-		</section>
-		{% endif %}
-{% endfor %}
+					<p class="post-excerpt">{{ post.content | strip_html | truncatewords: 25 }}</p>
+					<a href="{{ post.url | prepend: site.baseurl }}" class="post-readMore">read . . .</a>
+				</section>
+				{% break %}
+				{% endif %}
+		{% endfor %}
 
 		{% for post in site.posts %}
 		  {% if post.chronological == true %} 
