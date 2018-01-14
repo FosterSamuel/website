@@ -27,11 +27,9 @@ I build on the web. CS at Cal Poly Pomona.
 
 ### Descriptions
 
-```Robot``` and ```Website``` have no descriptions. Let's write those:
+```Website``` has no descriptions. Let's write it:
 
 ```
-Robot:
-  - RoboCode bot for Java project in CS141
 Website:
   - Personal website and Jekyll-based blog
 ```
