@@ -27,7 +27,7 @@ I build on the web. CS at Cal Poly Pomona.
 
 ### Descriptions
 
-```Website``` has no descriptions. Let's write it:
+```Website``` has no description. Let's write it:
 
 ```
 Website:
