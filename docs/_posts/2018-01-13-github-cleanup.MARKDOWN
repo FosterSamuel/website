@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GitHub Cleanup"
-date:   2018-01-13 17:00:00 -0800
+date:   2018-01-13 08:00:00 -0800
 author: "Samuel Foster"
 categories: 2018 january github
 tagList: {2018}
