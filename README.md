@@ -7,6 +7,12 @@ Not sure what to do? WhatToDo will find the best task for you based on the amoun
 ## Usage example
 
 Enter a number of tasks, how long they take, and their priority. Let what-to-do figure out what you should do next.
+=======
+# Website
+> Personal home on the internet
+
+[Come visit!](https://www.fostersamuel.com/)
+>>>>>>> 1bfa5701d5540442ca3691a394e34a732194b7bf
 
 ## Meta
 
