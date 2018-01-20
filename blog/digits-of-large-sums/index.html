@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Samuel Foster">
+	<meta name="theme-color" content="#fff">
+	<meta name="twitter:title" content="Digits of Large Sums">
+	<meta name="description" content="">
+	<meta property="og:site_name" content="https://www.fostersamuel.com/blog/">
+	<meta property="og:email" content="samuelfosterweb@gmail.com">
+	<meta property="og:type" content="blog">
+	<meta property="twitter:account_id" content="3449365214">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="https://www.fostersamuel.com/blog/" />
+	<meta name="twitter:title" content="Digits of Large Sums" />
+	<meta name="twitter:description" content="Can you digit?" />
+	<meta name="twitter:image" content="https://www.fostersamuel.com/blog/media/digits.jpeg" />
+
+
+	<title>Digits of Large Sums</title>
+
+	<link rel="icon" type="image/x-icon" href="../media/favicon.png">
+
+	<link rel="stylesheet" href="../css/base.css" type="text/css">
+	<link rel="canonical" href="http://localhost:4000/blog/digits-of-large-sums/">
+</head>
+
+<body>
+	<header class="siteNavigation">
+	<h1 class="siteNavigation-home"><a href="http://localhost:4000/blog">Samuel Foster</a></h1>
+		<label class="siteNavigation-menuLabel" for="menuToggle">Menu</label>
+		<input class="siteNavigation-menuToggle" type="checkbox" id="menuToggle"></input>
+		<nav class="siteNavigation-links">
+			<h2 class="hidden">Site Navigation</h2>
+			<a href="https://www.fostersamuel.com/blog" class="siteNavigation-link">HOME</a>
+			<a href="https://www.fostersamuel.com/" class="siteNavigation-link">PORTFOLIO</a>
+			<a href="https://www.fostersamuel.com/#about" class="siteNavigation-link">ABOUT</a>
+		</nav>
+</header>
+	<main>
+		<article class="post">
+			<h2 class="post-title">Digits of Large Sums</h2>
+<time class="post-time">19 JANUARY 2018</time>
+<p><a class="post-writtenLink" href="https://projecteuler.net" rel="noopener" target="_blank">Project Euler</a> hosts over 600 interesting math programming problems. <a class="post-writtenLink" href="https://projecteuler.net/problem=13" rel="noopener" target="_blank">Problem thirteen</a>  asks for the first ten digits of the sum of  equally-sized large numbers. The page offers these massive numbers:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="mi">37107287533902102798797998220837590246510135740250</span>
+<span class="mi">46376937677490009712648124896970078050417018260538</span>
+<span class="mi">74324986199524741059474233309513058123726617309629</span>
+<span class="mi">91942213363574161572522430563301811072406154908250</span>
+<span class="p">...</span>
+<span class="p">...</span>
+<span class="p">...</span>
+<span class="mi">77158542502016545090413245809786882778948721859617</span>
+<span class="mi">72107838435069186155435662884062257473692284509516</span>
+<span class="mi">20849603980134001723930671666823555245252804609722</span>
+<span class="mi">53503534226472524250874054075591789781264330331690</span>
+</code></pre>
+</div>
+
+<h1 id="smaller-problem">Smaller Problem</h1>
+
+<p>A smaller problem should be helpful. How about finding the first digit of the sum of three smaller numbers?</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="mi">395</span>
+<span class="mi">593</span>
+<span class="mi">296</span>
+</code></pre>
+</div>
+
+<p>Each column of digits can be separated and added.  If the sum of a column is longer than one digit, I’ll strip the leftmost digit(s) and add to the next column.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">14</span> <span class="c1">// (4)</span>
+
+<span class="c1">// + 1 from previous column</span>
+<span class="mi">9</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">28</span> <span class="c1">// (8)</span>
+
+<span class="c1">// + 2 from previous column</span>
+<span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">12</span> <span class="c1">// (don't have to strip the last column)</span>
+</code></pre>
+</div>
+
+<p>Placing all column sums beside each other, the first digit of the final sum is easy to grab.</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="mi">12</span><span class="p">..</span><span class="mi">8</span><span class="p">..</span><span class="mi">4</span>
+<span class="mi">1284</span> <span class="c1">// Grab the first digit: 1</span>
+</code></pre>
+</div>
+
+<h1 id="translating-to-python">Translating to Python</h1>
+
+<p>I placed the original 50-digit numbers into the file <code class="highlighter-rouge">nums.txt</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'nums.txt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+<span class="n">importedNumbers</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">lines</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>To get their sums, digit columns must be created. I added an additional spot in <code class="highlighter-rouge">sums</code> for overflow.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">columns</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">MAX_COLUMNS</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">importedNumbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="c"># how many digits are each number?</span>
+
+<span class="k">for</span> <span class="n">dummy</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">MAX_COLUMNS</span><span class="p">):</span>
+    <span class="n">columns</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+    <span class="n">sums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Each number must be converted to a string, <code class="highlighter-rouge">letters</code>, to grab the digits. The plucked digits are placed in their column by counting up <code class="highlighter-rouge">index</code>. I want the rightmost digits first. <code class="highlighter-rouge">Columns</code> gets reversed.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Convert numbers loaded in</span>
+<span class="c"># to lists of digit columns     </span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">importedNumbers</span><span class="p">:</span>
+    <span class="n">letters</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">MAX_COLUMNS</span><span class="p">):</span>
+        <span class="n">digit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">letters</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+        <span class="n">columns</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span>
+
+<span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">columns</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p>I added each column, spilling the overflow digits to the next column.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">columnIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)):</span>
+    <span class="n">currentColumn</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="n">columnIndex</span><span class="p">]</span>
+
+    <span class="c"># Retain overflow from previous columns</span>
+    <span class="n">newColumnSum</span> <span class="o">=</span> <span class="n">sums</span><span class="p">[</span><span class="n">columnIndex</span><span class="p">]</span>
+
+    <span class="c"># Add sum of current column</span>
+    <span class="n">newColumnSum</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">currentColumn</span><span class="p">)</span>
+
+    <span class="n">letters</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">newColumnSum</span><span class="p">)</span>
+    <span class="n">lastPosition</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="c"># Save single digit for column</span>
+    <span class="n">sums</span><span class="p">[</span><span class="n">columnIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">letters</span><span class="p">[</span><span class="n">lastPosition</span><span class="p">])</span>
+
+    <span class="c"># Move overflow if necessary</span>
+    <span class="k">if</span> <span class="n">newColumnSum</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="n">otherDigits</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">letters</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">lastPosition</span><span class="p">])</span> 
+        <span class="n">sums</span><span class="p">[</span><span class="n">columnIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">otherDigits</span>
+</code></pre>
+</div>
+
+<p>Lastly, I pieced together the sums to build the large sum.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">finalSum</span> <span class="o">=</span> <span class="s">""</span>
+<span class="n">sums</span> <span class="o">=</span> <span class="n">sums</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">sums</span><span class="p">)]</span> <span class="c"># Cut off the original extra spot used to avoid errors</span>
+<span class="n">sums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">sums</span><span class="p">))</span> <span class="c"># Get back in order</span>
+
+<span class="c"># Build final sum</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">sums</span><span class="p">:</span>
+    <span class="n">finalSum</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="n">finalSumDigits</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">finalSum</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">finalSumDigits</span><span class="p">)</span> <span class="c"># 5537376230</span>
+</code></pre>
+</div>
+
+<h1 id="major-mistake">Major Mistake</h1>
+
+<p>I did not consider trying the bruteforce method. The results are painfully faster than my wasteful code. Ouch.</p>
+
+<p>Timing in seconds:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Iterations</th>
+      <th> </th>
+      <th> </th>
+      <th style="text-align: center">columns</th>
+      <th> </th>
+      <th> </th>
+      <th>sum()</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">10</td>
+      <td> </td>
+      <td> </td>
+      <td style="text-align: center">0.03</td>
+      <td> </td>
+      <td> </td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">10,000</td>
+      <td> </td>
+      <td> </td>
+      <td style="text-align: center">31.54</td>
+      <td> </td>
+      <td> </td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <td style="text-align: right"> </td>
+      <td> </td>
+      <td> </td>
+      <td style="text-align: center"> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>According to this <a class="post-writtenLink" href="https://stackoverflow.com/a/24578976" rel="noopener" target="_blank">helpful StackOverflow comment</a>, Python does not interpret to compute <code class="highlighter-rouge">sum()</code>. There is, however, an even faster solution. Check out <a class="post-writtenLink" href="https://stackoverflow.com/a/24579773" target="_blank" rel="noopener">this answer</a> covering the use of Numpy to beat <code class="highlighter-rouge">sum()</code>’s timing.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p>Don’t immediately doubt bruteforcing. Keep it simple.</p>
+
+<p>The answer to the problem is 5537376230.</p>
+
+<p><a class="post-writtenLink" href="https://projecteuler.net/archives" rel="noopener" target="_blank">See all Project Euler problems.</a></p>
+
+		</article>
+		<footer class='info'>
+    		<a class='hidden info-resume'>View Resume</a>
+    		<img class="info-face" src="../media/profile_picture_optimized_min.png" width="1224" height="1220" alt="Picture of Samuel Foster"/>
+            <h3 class="info-header">Samuel Foster</h3>
+            <p class="info-me" id="about">
+                Find me on <a class="info-socialLink" href="http://www.twitter.com/samuelfosterweb" target="_blank">Twitter</a> and <a class="info-socialLink" href="https://www.github.com/fostersamuel" target="_blank">GitHub</a>.
+            </p>
+</footer>
+	</main>
+</body>
+
+</html>
