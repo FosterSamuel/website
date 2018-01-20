@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Digits of Large Sums"
-date:   2018-01-19 20:00:00 -0800
+date:   2018-01-19 08:00:00 -0800
 author: "Samuel Foster"
 categories: 2018 january projectEuler
 tagList: {2018}
