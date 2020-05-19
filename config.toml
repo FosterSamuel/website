@@ -1,4 +1,4 @@
-baseURL = "https://fostersamuel.com/blog"
+baseURL = "https://www.fostersamuel.com/blog"
 languageCode = "en-us"
 title = "Samuel Foster's Blog"
 theme = "leanblog"
