@@ -1,3 +1,9 @@
 [context.production.environment]
 HUGO_VERSION = "0.71.0"
 HUGO_ENV = "production"
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://www.fostersamuel.com/blog/"
+  status = 200
+  force = true
