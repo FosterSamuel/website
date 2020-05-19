@@ -1,0 +1,24 @@
+{{ define "main" }}
+	<main class="center stack">
+		<article class="stack">
+			<h1>{{ .Title }}</h1>
+			<time class="smallprint" datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time>
+			{{if .Params.hasLastMod}}
+			<p class="smallprint">Last modified <time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "January 2, 2006" }}</time>.</p>
+			{{end}}
+			{{ .Content }}
+		</article>
+		<ul class="navigate-post">
+		  {{if .PrevPage}}
+		  <li class="previous">
+		    <a class="navigate-post-link" href="{{.PrevPage.RelPermalink}}">&larr;<i>{{ .PrevPage.Title }}</i></a>
+		  </li>
+		  {{end}}
+		  {{if .NextPage}}
+		  <li class="next">
+		    <a class="navigate-post-link" href="{{.NextPage.RelPermalink}}"><i>{{ .NextPage.Title }}</i>&rarr;</a>
+		  </li>
+		  {{end}}
+		</ul>
+	</main>
+{{ end }}

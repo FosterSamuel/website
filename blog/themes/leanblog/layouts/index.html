@@ -1,0 +1,8 @@
+{{ define "main" }}
+	<main class="stack center">
+		<h1>Blog</h1>
+		{{ range .Pages.ByDate.Reverse }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</main>
+{{ end }}

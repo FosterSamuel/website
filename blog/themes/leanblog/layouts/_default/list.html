@@ -1,0 +1,14 @@
+{{ define "main" }}
+	<main class="center">
+		{{ if or .Title .Content }}
+			{{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+			{{ with .Content }}<p>{{ . }}</p>{{ end }}
+		{{ end }}
+
+		{{ range .Pages }}
+		<p>hey</p>
+			{{ .Render "summary" }}
+		{{ end }}
+		{{ partial "pagination.html" . }}
+	</main>
+{{ end }}
