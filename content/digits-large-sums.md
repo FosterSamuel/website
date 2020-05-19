@@ -1,7 +1,8 @@
 ---
 title: "Digits of Large Sums"
 date: 2018-01-19 08:00:00-0800
-draft: true
+draft: false
+hasLastMod: false
 ---
 
 <a class="post-writtenLink" href="https://projecteuler.net" rel="noopener" target="_blank">Project Euler</a> hosts over 600 interesting math programming problems. <a class="post-writtenLink" href="https://projecteuler.net/problem=13" rel="noopener" target="_blank">Problem thirteen</a>  asks for the first ten digits of the sum of  equally-sized large numbers. The page offers these massive numbers:
