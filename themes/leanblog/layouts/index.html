@@ -1,8 +1,18 @@
 {{ define "main" }}
 	<main class="stack center">
-		<h1>Blog</h1>
-		{{ range .Pages.ByDate.Reverse }}
-			{{ .Render "summary" }}
-		{{ end }}
+		<section class="intro">
+			<h2 class="hidden">Introduction</h2>
+			<span>Hello,</span>
+			<p>I'm Samuel Foster, a software engineer passionate about education, running, and <a href="/about">more.</a></p>
+		</section>
+		<section class="stack">
+			<h2>Writing</h2>
+			<ol class="stack postSummaries">
+			{{ range first 3 .Pages.ByDate.Reverse }}
+				{{ .Render "summary" }}
+			{{ end }}
+			</ol>
+			<a href="/posts">See more posts</a>
+		</section>
 	</main>
 {{ end }}

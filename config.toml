@@ -1,6 +1,6 @@
-baseURL = "https://www.fostersamuel.com/blog"
+baseURL = "https://www.fostersamuel.com"
 languageCode = "en-us"
-title = "Samuel Foster's Blog"
+title = "Samuel Foster"
 theme = "leanblog"
 summaryLength = 3
 [markup]

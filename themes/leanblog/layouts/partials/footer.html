@@ -1,3 +1,10 @@
 <footer>
-	<p><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+	<nav>
+		<h2 class="hidden">Website Navigation</h2>
+		<a href="{{ .Site.BaseURL }}">Home</a>
+		<a href="{{ "/work" | relURL }}">Work</a>
+		<a href="{{ "/about" | relURL }}">About</a>
+		<a href="{{ "/contact" | relURL }}">Contact</a>
+	</nav>
+	<p></p>
 </footer>

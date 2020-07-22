@@ -1,7 +1,6 @@
 ---
 title: "First Year"
 date: 2017-06-10 04:00:00-0800
-hasLastMod: false
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Digits of Large Sums"
 date: 2018-01-19 08:00:00-0800
 draft: false
-hasLastMod: false
+summary: Tackling the thirteenth Project Euler problem.
 ---
 
 <a class="post-writtenLink" href="https://projecteuler.net" rel="noopener" target="_blank">Project Euler</a> hosts over 600 interesting math programming problems. <a class="post-writtenLink" href="https://projecteuler.net/problem=13" rel="noopener" target="_blank">Problem thirteen</a>  asks for the first ten digits of the sum of  equally-sized large numbers. The page offers these massive numbers:
@@ -148,4 +148,4 @@ Don't immediately doubt bruteforcing. Keep it simple.
 The answer to the problem is 5537376230.
 
 
-<a class="post-writtenLink" href="https://projecteuler.net/archives" rel="noopener" target="_blank">See all Project Euler problems.</a>
+See all <a class="post-writtenLink" href="https://projecteuler.net/archives" rel="noopener" target="_blank">Project Euler problems.</a>

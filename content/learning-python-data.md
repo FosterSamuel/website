@@ -1,8 +1,8 @@
 ---
 title: "Learning Python: Data"
 date: 2017-07-23 14:30:00-0800
-hasLastMod: false
 draft: false
+summary: Storing basic data in Python.
 ---
 
 Every six months I read my old code. I try to decipher what a variable's purpose was or what a particular loop did. After years of not writing in *Liberty BASIC*, I cannot answer these curiosities. The lack of answers in one of my largest projects, a text-based RPG, still gets to me.

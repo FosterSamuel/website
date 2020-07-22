@@ -1,12 +1,9 @@
+<h1 class="hidden">Samuel Foster</h1>
 <header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{ with .Site.Menus.main }}
 	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
+		<h2 class="hidden">Website Navigation</h2>
+		<a href="{{ .Site.BaseURL }}">Samuel Foster</a>
+		<a href="../work"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" ><path d="M24 22H0V7h24v15zM9 2a2 2 0 00-2 2v2h2V4.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5V6h2V4a2 2 0 00-2-2H9z"/></svg><span>Work</span></a><a href="../about"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M20.82 18.1c-3.44-.8-6.64-1.5-5.09-4.42C20.45 4.77 16.98 0 12 0 6.92 0 3.54 4.95 8.27 13.68c1.6 2.94-1.73 3.64-5.1 4.42C.12 18.8 0 20.33 0 23v1h24v-.97c.01-2.69-.1-4.22-3.18-4.93z"/></svg><span>About</span></a><a href="../contact"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg><span>Contact</span></a>
 		</ul>
 	</nav>
-	{{ end }}
 </header>
