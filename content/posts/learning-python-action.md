@@ -8,7 +8,7 @@ summary: Basic program flow in Python.
 Action dictates data and program flow. In my old *Liberty BASIC* programs, I feel lost in the action after years of not writing any. 
 
 <figure>
-  <img alt="Picture of DRONE langauge commands I wrote inside of a math program I wrote in Liberty BASIC " width="auto" height="200px" src="../images/libbasic_drone.PNG">
+  <img alt="Picture of DRONE langauge commands I wrote inside of a math program I wrote in Liberty BASIC " width="auto" height="200px" src="../../images/libbasic_drone.PNG">
   <figcaption>Inside of my math program, I wrote a small language called DRONE.</figcaption>
 </figure>
 

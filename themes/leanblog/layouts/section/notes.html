@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{.Content}}
+<article class="stack center archive">
+	<h2>Notes</h2>
+    <ol class="stack postSummaries">
+    {{ range .Pages }}
+        {{ .Render "title"}}
+    {{ end }}
+    </ol>
+</article>
+{{ end }}

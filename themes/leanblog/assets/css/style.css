@@ -13,6 +13,7 @@
   --s5: calc(var(--s4) * var(--ratio));
   --measure: 80ch;
   --regular-text: 1rem;
+  --page-margins: 11px;
 
   --black: hsl(205, 61%, 16%);
   --light-black: hsl(205, 31%, 14%);
@@ -52,16 +53,13 @@ body {
 	background: hsl(215, 100%, 98%);
   color: #091702;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-  line-height: 1.54;
+  font-size: var(--regular-text);
   overflow-y: scroll;
+  line-height: 1.56;
 }
 
-header, footer {
-  padding: var(--s1) 0 0 0;
-}
-
-article, aside, footer, header, nav, section {
-  display: block;
+body > header {
+  margin: var(--page-margins);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -70,13 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: var(--regular-text);
   overflow-wrap: break-word;
   word-break: break-word;
-}
-
-p + p {
-  margin-bottom: var(--s0);
 }
 
 blockquote {
@@ -98,6 +91,7 @@ time {
 a {
   text-decoration: none;
   color: var(--link-color);
+  font-weight: bold;
 }
 
 a:hover {
@@ -137,13 +131,8 @@ ul li {
   margin-bottom: 0;
 } 
 
-.stack > * + * {
+.stack > *:not(h3) + * {
   margin-top: var(--space);
-}
-
-header {
-  width: 92%;
-  margin: 0 auto var(--s0) auto;
 }
 
 .archive h3 {
@@ -166,7 +155,7 @@ nav a:first-of-type {
 nav a {
   display: inline-block;
   margin-right: var(--s0);
-  font-weight: bold;
+  margin-bottom: var(--s-2);
 }
 
 nav a:hover > * {
@@ -205,22 +194,38 @@ nav svg {
   color: var(--grey); 
 }
 
+.viewAll {
+  display: block;
+  margin: var(--s1) 0;
+}
+
 .post {
   margin-top: var(--s0);
 }
 
-.post > * {
-  width: 92%;
-  margin-left: auto;
-  margin-right: auto;
+.post > *:not(.highlight):not(figure) {
+  margin-left: var(--page-margins);
+  margin-right: var(--page-margins);
 }
 
 .post time, .post [lastmod], .post figcaption {
   color: var(--grey);
 }
 
-.post figure {
-  padding: var(--s-1) 0;
+.post > figure {
+  margin-top: var(--s1);
+  margin-bottom: var(--s1);
+}
+
+.post figure >figcaption {
+  padding: var(--s-2);
+  font-size: .85rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.post p {
+  margin-bottom: var(--s-1)
 }
 
 .post [rel="next"] {
@@ -234,19 +239,17 @@ nav svg {
   display: block;
 }
 
-.works header {
-  padding: 0;
-  width: 100%;
+.works {
+  margin: 0 auto;
 }
 
-.works header > h2 {
-  font-size: var(--s2);
+.works > * {
+  margin: var(--page-margins);
 }
 
 .works section > p:first-of-type {
   color: var(--grey);
   font-weight: bold;
-  font-size: var(--s-1);
   margin-bottom: var(--s0);
 }
 
@@ -272,6 +275,8 @@ code {
 .highlight {
   overflow-x: auto; 
   width: 100%;
+  margin-block-start: var(--s1);
+  margin-block-end: var(--s1);
 }
 
 .highlight pre {
@@ -280,7 +285,6 @@ code {
 .highlight code {
   color: inherit;
   background: inherit;
-  font-size: 105%;
   border: 0;
   margin: initial;
   word-wrap: initial;
@@ -311,29 +315,31 @@ body > footer nav {
   margin-right: auto;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 850px) {
   * {
-    --measure: 70ch;
-    --regular-text: 1.2rem;
+    --measure: 55ch;
+    --regular-text: 1.3rem;
   }
 
   main {
     margin: 0 auto;
   }
 
-  header {
-    max-width: var(--measure);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   nav a {
-    margin-right: var(--s2);
+    margin-right: var(--s1);
   }
 
   nav a:first-of-type {
     display: inline-block;
-    margin-right: var(--s4);
+    margin-right: var(--s0);
+  }
+
+  nav svg {
+    vertical-align: baseline;
+  }
+
+  .audio {
+    height: 22px;
   }
 
   .navigate-post li {
@@ -344,6 +350,8 @@ body > footer nav {
   .post > * {
     padding: initial;
     width: 100%;
+    margin-left: var(--page-margins);
+    margin-right: var(--page-margins);
   }
 
   .works section > h3 {

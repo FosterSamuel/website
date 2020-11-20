@@ -5,14 +5,22 @@
 			<span>Hello,</span>
 			<p>I'm Samuel Foster, a software engineer passionate about education, running, and <a href="/about">more.</a></p>
 		</section>
-		<section class="stack">
-			<h2>Writing</h2>
+		<section>
+			<h2 class="hidden">Writing</h2>
 			<ol class="stack postSummaries">
-			{{ range first 3 .Pages.ByDate.Reverse }}
+			{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
 				{{ .Render "summary" }}
 			{{ end }}
 			</ol>
-			<a href="/posts">See more posts</a>
+			<a class="viewAll" href="/posts">View all posts&rarr;</a>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<ol class="postSummaries">
+			{{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
+				{{ .Render "title" }}
+			{{ end }}
+			</ol>
 		</section>
 	</main>
 {{ end }}

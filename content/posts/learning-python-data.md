@@ -8,7 +8,7 @@ summary: Storing basic data in Python.
 Every six months I read my old code. I try to decipher what a variable's purpose was or what a particular loop did. After years of not writing in *Liberty BASIC*, I cannot answer these curiosities. The lack of answers in one of my largest projects, a text-based RPG, still gets to me.
 
 <figure class="post-figure">
-	<img class="post-figureImage" alt="Frustrating, poorly-written variables inside of the Liberty BASIC Editor" width="auto" height="200px" src="../images/libbasic.PNG">
+	<img class="post-figureImage" alt="Frustrating, poorly-written variables inside of the Liberty BASIC Editor" width="auto" height="200px" src="../../images/libbasic.PNG">
 	<figcaption class="post-figureCaption">Uh, Samuel...which bonus is tied to which stat?</figcaption>
 </figure>
 

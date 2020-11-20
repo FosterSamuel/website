@@ -1,0 +1,9 @@
+{{ define "main" }}
+	<main class="stack">
+		<article class="post">
+			<h2>{{ .Title }}</h2>
+			<p lastmod>Last modified: <time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "January 2, 2006" }}</time>.</p>
+			{{ .Content }}
+		</article>
+	</main>
+{{ end }}

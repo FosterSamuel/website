@@ -21,7 +21,7 @@ summary: Tackling the thirteenth Project Euler problem.
 53503534226472524250874054075591789781264330331690
 ```
 
-# Smaller Problem
+### Smaller Problem
 
 A smaller problem should be helpful. How about finding the first digit of the sum of three smaller numbers?
 
@@ -49,7 +49,7 @@ Placing all column sums beside each other, the first digit of the final sum is e
 1284 // Grab the first digit: 1
 ```
 
-# Translating to Python
+### Translating to Python
 
 I placed the original 50-digit numbers into the file ```nums.txt```. 
 
@@ -127,7 +127,7 @@ finalSumDigits = int(finalSum[:10])
 print(finalSumDigits) # 5537376230
 ```
 
-# Major Mistake
+### Major Mistake
 
 I did not consider trying the bruteforce method. The results are painfully faster than my wasteful code. Ouch. 
 
@@ -141,7 +141,7 @@ Timing in seconds:
 
 According to this <a class="post-writtenLink" href="https://stackoverflow.com/a/24578976" rel="noopener" target="_blank">helpful StackOverflow comment</a>, Python does not interpret to compute ```sum()```. There is, however, an even faster solution. Check out <a class="post-writtenLink" href="https://stackoverflow.com/a/24579773" target="_blank" rel="noopener">this answer</a> covering the use of Numpy to beat ```sum()```'s timing.
 
-# What I Learned
+### What I Learned
 
 Don't immediately doubt bruteforcing. Keep it simple.
 
