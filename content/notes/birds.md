@@ -12,7 +12,7 @@ draft: false
 </figure>
 
 <figure>
-	<img src="https://live.staticflickr.com/65535/48149350162_83175f2b5f_3k.jpg" width="3072" height="2153" alt="Female Anna's Hummingbird on Cascara">
+	<img width="248" alt="Female Anna's Hummingbird perched on Cascara" src="https://live.staticflickr.com/65535/48149350162_83175f2b5f_3k.jpg">
 	<figcaption>Female Anna's Hummingbird. <a href="#anna-female">[2]</a></figcaption>
 </figure>
 

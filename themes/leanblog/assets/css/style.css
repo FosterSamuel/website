@@ -106,7 +106,7 @@ img {
 }
 
 ul li {
-  margin-left: 2rem;
+  margin-left: var(--s0);
 }
 
 .center {
@@ -163,17 +163,6 @@ nav a:hover > * {
   color: var(--accent);
 }
 
-nav span {
-  letter-spacing: -.5px;
-  color: var(--link-color);
-}
-
-nav svg {
-  margin-right: 5px;
-  vertical-align: text-top;
-  fill: var(--link-color);
-}
-
 .intro > span {
   font-size: var(--s2);
   font-weight: bold;
@@ -203,6 +192,10 @@ nav svg {
   margin-top: var(--s0);
 }
 
+.post ol li {
+  margin-left: var(--s0);
+}
+
 .post > *:not(.highlight):not(figure) {
   margin-left: var(--page-margins);
   margin-right: var(--page-margins);
@@ -210,6 +203,7 @@ nav svg {
 
 .post time, .post [lastmod], .post figcaption {
   color: var(--grey);
+  margin-top:0;
 }
 
 .post > figure {
@@ -225,7 +219,8 @@ nav svg {
 }
 
 .post p {
-  margin-bottom: var(--s-1)
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 .post [rel="next"] {
@@ -334,8 +329,8 @@ body > footer nav {
     margin-right: var(--s0);
   }
 
-  nav svg {
-    vertical-align: baseline;
+  .post ol li {
+    margin-left: var(--s2);
   }
 
   .audio {
