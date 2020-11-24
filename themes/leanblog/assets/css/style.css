@@ -218,7 +218,7 @@ nav a:hover > * {
   text-align: center;
 }
 
-.post p {
+.post p, .post ul, .post ol {
   margin-block-start: 1em;
   margin-block-end: 1em;
 }

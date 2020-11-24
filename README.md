@@ -5,8 +5,6 @@
 
 ## Meta
 
-Samuel Foster – [@SamuelFosterWeb](https://twitter.com/samuelfosterweb) – samuelfosterweb@gmail.com
-
 Distributed under the Unlicense. See ``LICENSE`` for more information.
 
 [https://github.com/fostersamuel](https://github.com/fostersamuel/)
