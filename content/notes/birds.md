@@ -1,9 +1,22 @@
 ---
 title: "Birds"
 date: 2020-11-20T11:20:41-07:00
-lastmod: 2020-11-23T11:20:41-07:00
+lastmod: 2020-11-25T11:20:41-07:00
 draft: false
 ---
+
+### Spotted Towhee (*Pipilo maculatus*)
+<figure>
+	<img width="248" alt="Male Spotted Towhee, sitting on tree branch" src="https://live.staticflickr.com/4602/40646868891_6d20e157a1_h.jpg">
+	<figcaption>Male Spotted Towhee. <a href="#spotted-towhee-male">[1]</a></figcaption>
+</figure>
+
+<figure>
+	<img width="248" alt="Female Spotted Towhee glowering from tree branch" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/SpottedTowhee-24JAN2017.jpg/1024px-SpottedTowhee-24JAN2017.jpg
+"></a>
+	<figcaption>Female Spotted Towhee. <a href="#spotted-towhee-female">[2]</a> </figcaption>
+</figure>
+
 
 ### Anna's Hummingbird (*Calypte anna*)
 
@@ -23,7 +36,14 @@ This is the sound of Anna's Hummingbird: <a href="#anna-call">[1]</a> <iframe sr
 	<figcaption>Female Anna's Hummingbird. <a href="#anna-female">[3]</a></figcaption>
 </figure>
 
+
+
+
 ### Sources
+##### Spotted Towhee
+1. <p id="spotted-towhee-male"><a href="https://commons.wikimedia.org/wiki/File:Spotted_Towhee_(40646868891).jpg">Becky Matsubara from El Sobrante, California</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons</p>
+2. <p id="spotted-towhee-female"><a href="https://commons.wikimedia.org/wiki/File:SpottedTowhee-24JAN2017.jpg">ADJ82</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, via Wikimedia Commons</p>
+
 ##### Anna's Hummingbird
 1. <p id="anna-call"><a target="_blank" href="https://commons.wikimedia.org/wiki/File:Calypte_anna_-_Anna%27s_Hummingbird_-_XC109651.ogg">Jonathon Jongsma</a>, <a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</p>
 2. <p id="anna-male"><a target="_blank" title="Becky Matsubara from El Sobrante, California, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Anna%27s_Hummingbird_(39089535924).jpg">Becky Matsubara from El Sobrante, California</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons </p>
