@@ -3,6 +3,7 @@ title: "Beginning"
 date: 2016-12-21 12:00:00 -0800
 hasLastMod: false
 draft: false
+summary: Welcome to my blog!
 ---
 
 Welcome to my blog! I am a web developer from California. Aside from my coding interests, I enjoy running, typing, and the wonder of plain bagels.
