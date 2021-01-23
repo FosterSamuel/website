@@ -105,7 +105,7 @@ img {
   height: auto;
 }
 
-ul li {
+ul, ul li {
   margin-left: var(--s0);
 }
 
@@ -196,7 +196,7 @@ nav a:hover > * {
   margin-left: var(--s0);
 }
 
-.post > *:not(.highlight):not(figure) {
+.post > *:not(.highlight):not(figure):not(ul) {
   margin-left: var(--page-margins);
   margin-right: var(--page-margins);
 }
@@ -218,7 +218,7 @@ nav a:hover > * {
   text-align: center;
 }
 
-.post p, .post ul, .post ol {
+.post p, .post > ul, .post > ol {
   margin-block-start: 1em;
   margin-block-end: 1em;
 }
@@ -342,7 +342,7 @@ body > footer nav {
     width: 49.5%;
   }
 
-  .post > * {
+  .post > *:not(ul) {
     padding: initial;
     width: 100%;
     margin-left: var(--page-margins);
