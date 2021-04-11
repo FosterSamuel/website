@@ -5,11 +5,23 @@ lastmod: 2021-04-11T16:30:41-07:00
 draft: false
 ---
 
+- [American Robin](#american-robin-_turdus-migratorius_)
+- [Steller's Jay](#stellers-jay-_cyanocitta-stelleri_)
+- [Spotted Towhee](#spotted-towhee-_pipilo-maculatus_)
+- [Anna's Hummingbird](#annas-hummingbird-_calypte-anna_)
+
+### American Robin (_Turdus migratorius_)
+
+<figure>
+	<img width="248" alt="American Robin standing in grass" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Turdus-migratorius-002.jpg">
+	<figcaption>American Robin. <a href="#american-robin">[1]</a></figcaption>
+</figure>
+
 ### Steller's Jay (_Cyanocitta stelleri_)
 
 <figure>
 	<img width="248" alt="Steller's jay, perched on fence" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Stellers_jay_-_natures_pics.jpg">
-	<figcaption>Steller's jay. <a href="#stellers-jay">[1]</a></figcaption>
+	<figcaption>Steller's Jay. <a href="#stellers-jay">[1]</a></figcaption>
 </figure>
 
 ### Spotted Towhee (_Pipilo maculatus_)
@@ -44,6 +56,10 @@ This is the sound of Anna's Hummingbird: <a href="#anna-call">[1]</a> <iframe sr
 </figure>
 
 ### Sources
+
+##### American Robin
+
+1. <p><a href="https://commons.wikimedia.org/wiki/File:Turdus-migratorius-002.jpg">en:User:Mdf</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons<p>
 
 ##### Steller's Jay
 
