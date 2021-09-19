@@ -55,7 +55,7 @@ body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-size: var(--regular-text);
   overflow-y: scroll;
-  line-height: 1.56;
+  line-height: 1.65;
 }
 
 body > header {
@@ -207,8 +207,8 @@ nav a:hover > * {
 }
 
 .post > figure {
-  margin-top: var(--s1);
-  margin-bottom: var(--s1);
+  margin-top: var(--s3);
+  margin-bottom: var(--s3);
 }
 
 .post figure > figcaption {
@@ -219,8 +219,8 @@ nav a:hover > * {
 }
 
 .post p, .post > ul, .post > ol {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: var(--s2);
+  margin-block-end: var(--s2);
 }
 
 .post [rel="next"] {
@@ -270,8 +270,8 @@ code {
 .highlight {
   overflow-x: auto; 
   width: 100%;
-  margin-block-start: var(--s1);
-  margin-block-end: var(--s1);
+  margin-block-start: var(--s2);
+  margin-block-end: var(--s2);
 }
 
 .highlight pre {
@@ -312,7 +312,7 @@ body > footer nav {
 
 @media(min-width: 850px) {
   * {
-    --measure: 55ch;
+    --measure: 70ch;
     --regular-text: 1.3rem;
   }
 
