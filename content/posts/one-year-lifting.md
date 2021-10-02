@@ -79,8 +79,8 @@ Jake never made me do a deadlift I couldn't do, so we'd cut short as soon as my 
 But I kept showing up. After weeks and weeks of failing I eventually broke the barrier and pushed to 430 and then 450. I felt over the moon.
 
 <figure>
-	<img loading="lazy" width="248" alt="Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 95 pounds and personal best of 450 pounds." src="../../images/lifting/deadlift.PNG">
-	<figcaption>Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 95 pounds and personal best of 450 pounds.</figcaption>
+	<img loading="lazy" width="248" alt="Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 275 pounds and personal best of 450 pounds." src="../../images/lifting/deadlift.PNG">
+	<figcaption>Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 275 pounds and personal best of 450 pounds.</figcaption>
 </figure>
 
 Here's an early 2020 video of my trying to deadlift followed by a video of the 450 pound deadlift:
