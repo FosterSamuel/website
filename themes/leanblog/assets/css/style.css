@@ -12,7 +12,7 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
   --measure: 80ch;
-  --regular-text: 1rem;
+  --regular-text: 1.25rem;
   --page-margins: 11px;
 
   --black: hsl(205, 61%, 16%);
@@ -24,13 +24,75 @@
   --link-color: hsl(210, 100%, 44%);
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  max-width: var(--measure);
-  text-rendering: optimizeLegibility;
+
+html {
+  margin: 0;
+  padding: 0;
+  line-height: 1.75;
+}
+
+
+body {
+  background: hsl(215, 100%, 98%);
   color: var(--black);
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: var(--regular-text);
+  line-height: 1.65;
+}
+
+nav {
+  max-width: var(--measure);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav > * {
+  margin: 0 var(--s1) 0 0;
+}
+
+main, article {
+  max-width: var(--measure);
+  padding: var(--s1) var(--s0);
+  margin: auto;
+}
+
+h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
+  margin: var(--s3) 0 var(--s0);
+}
+
+p {
+  margin: 0;
+  padding: 0.65em 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+figure {
+  margin: var(--s2) 0;
+}
+
+figcaption {
+  font-size: .85rem;
+  max-width: 100%;
+  text-align: center;
+  padding: var(--s-2) 0;
+}
+
+.highlight {
+  margin: 0 0 var(--s2) 0;
+} 
+
+a[rel="next"] {
+  display: block;
+  margin-bottom: var(--s0);
+  text-align: right;
 }
 
 .hidden {
@@ -40,324 +102,13 @@
   opacity: 0;
 }
 
-html,
-body,
-div,
-header,
-nav,
-footer {
-  max-width: none;
-}
-
-body {
-	background: hsl(215, 100%, 98%);
-  color: #091702;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-  font-size: var(--regular-text);
-  overflow-y: scroll;
-  line-height: 1.65;
-}
-
-body > header {
-  margin: var(--page-margins);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-p {
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-blockquote {
-  border-left: .5rem solid #222;
-  display: block;
-  padding-left: 2rem;
-  color: #333;
-}
-
-blockquote p {
-  font-style: italic;
-  margin-bottom: .5rem;
-}
-
-time {
-  font-weight: bold; 
-}
-
-a {
-  text-decoration: none;
-  color: var(--link-color);
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--accent);
-}
-
-img {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-
-ul, ul li {
-  margin-left: var(--s0);
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  width: 92%;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.stack {
-  --space: var(--s1);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
-} 
-
-.stack > *:not(h3) + * {
-  margin-top: var(--space);
-}
-
-.archive h3 {
-  color: var(--grey);
-}
-
-
-nav {
-  margin: var(--s-2) 0;
-}
-
-nav a:first-of-type {
-  display: block;
-  color: var(--grey);
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: var(--s-1)
-}
-
-nav a {
-  display: inline-block;
-  margin-right: var(--s0);
-  margin-bottom: var(--s-2);
-}
-
-nav a:hover > * {
-  fill: var(--accent);
-  color: var(--accent);
-}
-
-.intro > span {
-  font-size: var(--s2);
-  font-weight: bold;
-}
-
-.postSummaries {
-  list-style: none;
-}
-
-.postSummaries h2 {
-  letter-spacing: -1px;
-}
-
-.postSummaries time {
-  display: block;
-  font-weight: bold;
-  font-size: .8rem;
-  color: var(--grey); 
-}
-
-.viewAll {
-  display: block;
-  margin: var(--s1) 0;
-}
-
-.post {
-  margin-top: var(--s0);
-}
-
-.post ol li {
-  margin-left: var(--s0);
-}
-
-.post > *:not(.highlight):not(figure):not(ul) {
-  margin-left: var(--page-margins);
-  margin-right: var(--page-margins);
-}
-
-.post time, .post [lastmod], .post figcaption {
-  color: var(--grey);
-  margin-top:0;
-}
-
-.post > figure {
-  margin-top: var(--s3);
-  margin-bottom: var(--s3);
-}
-
-.post figure > figcaption {
-  padding: var(--s-2);
-  font-size: .85rem;
-  max-width: 100%;
-  text-align: center;
-}
-
-.post p, .post > ul, .post > ol {
-  margin-block-start: var(--s2);
-  margin-block-end: var(--s2);
-}
-
-.post [rel="next"] {
-  display: block;
-  margin-bottom: var(--s0);
-  text-align: right;
-  color: var(--link-color);
-}
-
-.post [rel="prev"] {
-  display: block;
-}
-
-.works {
-  margin: 0 auto;
-}
-
-.works > * {
-  margin: var(--page-margins);
-}
-
-.works section > p:first-of-type {
-  color: var(--grey);
-  font-weight: bold;
-  margin-bottom: var(--s0);
-}
-
-.works time {
-  font-weight: bold;
-  color: inherit;
-}
-
-/**
- * Syntax highlighting styles
- */
-code {
-  color: rgba(18, 18, 18, 0.92);
-  background: #fafafa;
-  padding: 3px 6px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  margin: 0;
-  font-size: 90%;
-  word-wrap: break-word;
-}
-
-.highlight {
-  overflow-x: auto; 
-  width: 100%;
-  margin-block-start: var(--s2);
-  margin-block-end: var(--s2);
-}
-
-.highlight pre {
-  padding: .75rem .25rem;
-}
-.highlight code {
-  color: inherit;
-  background: inherit;
-  border: 0;
-  margin: initial;
-  word-wrap: initial;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-body > footer {
-  margin-top: var(--s2);
-  padding: var(--s1);
-  flex: 1;
-  background-color: var(--light-grey);
-  color: white;
-  height: auto;
-  max-height: 100vh;
-  overflow-y: hidden;
-}
-
-body > footer nav {
-  max-width: var(--measure);
-  width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media(min-width: 850px) {
-  * {
-    --measure: 70ch;
-    --regular-text: 1.3rem;
+@media(max-width: 850px) {
+  :root {
+    --regular-text: 1rem;
   }
 
-  main {
-    margin: 0 auto;
-  }
-
-  nav a {
-    margin-right: var(--s1);
-  }
-
-  nav a:first-of-type {
-    display: inline-block;
-    margin-right: var(--s0);
-  }
-
-  .post ol li {
-    margin-left: var(--s2);
-  }
-
-  .audio {
-    height: 22px;
-  }
-
-  .navigate-post li {
-    display: inline-block;
-    width: 49.5%;
-  }
-
-  .post > *:not(ul) {
-    padding: initial;
-    width: 100%;
-    margin-left: var(--page-margins);
-    margin-right: var(--page-margins);
-  }
-
-  .works section > h3 {
-    font-size: var(--s1);
-  }
-
-  .works section > p:first-of-type {
-    font-size: var(--s0);
-  }
-
-  .postSummaries h3 {
-    font-size: var(--s1);
+  nav > * {
+    display: block;
+    margin: var(--s0);
   }
 }

@@ -1,14 +1,9 @@
 {{ define "main" }}
 {{.Content}}
-<article class="stack center archive">
+<main>
 	<h2>Notes</h2>
-    <ol class="stack postSummaries">
     {{ range .Pages }}
         {{ .Render "title"}}
     {{ end }}
-    <li>
-    	<h3><a href="https://erudio.us" target="_blank">Teaching</a></h3>
-    </li>
-    </ol>
-</article>
+</main>
 {{ end }}

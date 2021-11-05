@@ -1,26 +1,23 @@
 {{ define "main" }}
-	<main class="stack center">
+	<main>
 		<section class="intro">
 			<h2 class="hidden">Introduction</h2>
 			<span>Hello,</span>
 			<p>I'm Samuel Foster, a software engineer passionate about education, running, and <a href="/notes">more.</a></p>
 		</section>
 		<section>
-			<h2 class="hidden">Writing</h2>
-			<ol class="stack postSummaries">
+			<h2>Posts</h2>
 			{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
 				{{ .Render "summary" }}
 			{{ end }}
-			</ol>
-			<a class="viewAll" href="/posts">View all posts&rarr;</a>
+			<br>
+			<a href="/posts">View all posts&rarr;</a>
 		</section>
 		<section>
 			<h2>Notes</h2>
-			<ol class="postSummaries">
 			{{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
 				{{ .Render "title" }}
 			{{ end }}
-			</ol>
 		</section>
 	</main>
 {{ end }}

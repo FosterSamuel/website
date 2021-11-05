@@ -1,16 +1,14 @@
 {{ define "main" }}
 {{.Content}}
-<article class="stack center archive">
+<main>
 	<h2>Posts</h2>
 	{{ range (.Pages.GroupByDate "2006") }}
-	<section class="stack">
+	<section>
         <h3>{{ .Key }}</h3>
-        <ol class="stack postSummaries">
-            {{ range .Pages }}
-            	{{ .Render "summary"}}
-            {{ end }}
-        </ol>
+        {{ range .Pages }}
+            {{ .Render "summary"}}
+        {{ end }}
     </section>
     {{ end }}
-</article>
+</main>
 {{ end }}

@@ -1,20 +1,19 @@
 {{ define "main" }}
-	<main>
-		<article class="post">
-			<h2>{{ .Title }}</h2>
-			<p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"  }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-			{{if .Params.wasUpdated}}
-			<p lastmod>Last modified <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00"  }}">{{ .Lastmod.Format "January 2, 2006" }}</time>.</p>
+	<article>
+		<h2>{{ .Title }}</h2>
+		<p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"  }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+		{{if .Params.wasUpdated}}
+		<p lastmod>Last modified <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00"  }}">{{ .Lastmod.Format "January 2, 2006" }}</time>.</p>
+		{{end}}
+		{{ .Content }}			
+		<footer>
+			{{if .PrevInSection}}
+			<a class="navigate-post-link" rel="prev" href="{{.PrevInSection.RelPermalink}}">&larr;{{ .PrevInSection.Title }}</a>
 			{{end}}
-			{{ .Content }}
-			<footer class="navigate-post">
-			  {{ if .NextInSection }}
-			    <a class="navigate-post-link" rel="next" href="{{.NextInSection.RelPermalink}}">{{ .NextInSection.Title }}&rarr;</a>
-			  {{end}}
-			  {{if .PrevInSection}}
-			    <a class="navigate-post-link" rel="prev" href="{{.PrevInSection.RelPermalink}}">&larr;{{ .PrevInSection.Title }}</a>
-			  {{end}}
-			</footer>
-		</article>
-	</main>
+			{{ if .NextInSection }}
+			<a class="navigate-post-link" rel="next" href="{{.NextInSection.RelPermalink}}">{{ .NextInSection.Title }}&rarr;</a>
+			{{end}}
+			<p style="text-align: center;">Message me on Twitter <a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel.</a></p>
+		</footer>
+	</article>
 {{ end }}
