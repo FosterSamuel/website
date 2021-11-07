@@ -22,7 +22,9 @@
 	{{- end }}
 </head>
 <body>
-	{{ partial "header" . }}
+	{{if ne .Type "page"}}
+		{{ partial "header" . }}
+	{{end}}
 	{{ block "main" . }}{{ end }}
 </body>
 </html>

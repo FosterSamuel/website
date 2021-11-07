@@ -3,21 +3,20 @@
 		<section class="intro">
 			<h2 class="hidden">Introduction</h2>
 			<span>Hello,</span>
-			<p>I'm Samuel Foster, a software engineer passionate about education, running, and <a href="/notes">more.</a></p>
+			<p>I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. To learn more, <a href="/about">read here.</a> Contact me <a href="/contact">here.</a></a></p>
 		</section>
 		<section>
-			<h2>Posts</h2>
-			{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
+			<h2>Posts (<a href="/posts">see all &rarr;</a>)</h2>
+			{{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
 				{{ .Render "summary" }}
 			{{ end }}
-			<br>
-			<a href="/posts">View all posts&rarr;</a>
 		</section>
+		<br>
 		<section>
 			<h2>Notes</h2>
-			{{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
+			{{ range (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
 				{{ .Render "title" }}
-			{{ end }}
+			{{ end }}	
 		</section>
 	</main>
 {{ end }}
