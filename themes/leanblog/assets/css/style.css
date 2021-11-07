@@ -55,7 +55,7 @@ nav > * {
 
 main, article {
   max-width: var(--measure);
-  padding: var(--s1) var(--s0);
+  padding: 0 var(--s0) var(--s1) var(--s0);
   margin: auto;
 }
 
