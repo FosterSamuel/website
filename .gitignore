@@ -5,3 +5,4 @@ _site/
 _drafts/
 _site/
 docs/_drafts/
+.hugo_build.lock
