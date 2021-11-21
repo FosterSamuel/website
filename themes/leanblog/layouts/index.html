@@ -14,7 +14,7 @@
 		<br>
 		<section>
 			<h2>Notes</h2>
-			{{ range (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
+			{{ range (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
 				{{ .Render "title" }}
 			{{ end }}	
 		</section>

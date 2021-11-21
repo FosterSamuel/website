@@ -1,12 +1,11 @@
 {{ define "main" }}
-  <article class="post">
+  <article>
     <h2>{{ .Title }}</h2>
-    <p lastmod>
-      Last modified
-      <time datetime="{{ .Lastmod }}"
-        >{{ .Lastmod.Format "January 2, 2006" }}</time
-      >
-    </p>
+    <p>
+      {{ if ne .Lastmod .Date }} 
+        Last updated <time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "January 2, 2006" }}</time>.
+      {{end}} 
+      Started <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time>. 
     {{ .Content }}
   </article>
 {{ end }}

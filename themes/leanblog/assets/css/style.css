@@ -24,13 +24,11 @@
   --link-color: hsl(210, 100%, 44%);
 }
 
-
 html {
   margin: 0;
   padding: 0;
   line-height: 1.75;
 }
-
 
 body {
   background: hsl(215, 100%, 98%);
