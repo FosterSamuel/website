@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article>
     <h2>{{ .Title }}</h2>
-    <p>
+    <p time>
       {{ if ne .Lastmod .Date }} 
         Last updated <time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "January 2, 2006" }}</time>.
       {{end}} 

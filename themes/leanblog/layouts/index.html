@@ -2,9 +2,10 @@
 	<main>
 		<section class="intro">
 			<h2 class="hidden">Introduction</h2>
-			<span>Hey,</span>
-			<p>I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Message me on <a href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a> or Twitter <a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel</a>. Learn more about me by <a href="/about">reading here</a>. </p>
+			<img style="border-radius: 50%; max-width: 125px; margin:  1rem 1rem 0 0; float: left; shape-outside: circle(50%);" src="../../images/profile.jpg" loading="lazy" />
+			<p>Hi — I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Message me on <a href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a> or Twitter <a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel</a>. </p>
 		</section>
+		<br>
 		<section>
 			<h2>Posts</h2>
 			{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
