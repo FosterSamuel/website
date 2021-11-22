@@ -2,7 +2,8 @@
 {{.Content}}
 <main>
 	<h2>Notes</h2>
-    {{ range .Pages }}
+    <p>In order of last updated:</p>
+    {{ range (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
         {{ .Render "title"}}
     {{ end }}
 </main>

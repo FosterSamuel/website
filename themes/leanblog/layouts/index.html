@@ -3,20 +3,23 @@
 		<section class="intro">
 			<h2 class="hidden">Introduction</h2>
 			<span>Hey,</span>
-			<p>I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Message me on Twitter <a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel</a> or learn more by <a href="/about">reading here</a>. </p>
+			<p>I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Message me on <a href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a> or Twitter <a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel</a>. Learn more about me by <a href="/about">reading here</a>. </p>
 		</section>
 		<section>
-			<h2>Posts (<a href="/posts">see all &rarr;</a>)</h2>
-			{{ range first 5 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
+			<h2>Posts</h2>
+			{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts")  }}
 				{{ .Render "summary" }}
 			{{ end }}
+			... 
+			and <a href="/posts">{{ sub (len (where .Site.Pages "Section" "posts")) 4 }} more &rarr;</a> 
 		</section>
 		<br>
 		<section>
 			<h2>Notes</h2>
-			{{ range (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
+			{{ range first 3 (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
 				{{ .Render "title" }}
-			{{ end }}	
+			{{ end }}
+			...and <a href="/notes">{{ sub (len (where .Site.Pages "Section" "notes")) 4 }} others &rarr;</a> 	
 		</section>
 	</main>
 {{ end }}
