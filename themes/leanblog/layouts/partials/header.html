@@ -5,7 +5,7 @@
 		<a href="{{ .Site.BaseURL }}">Samuel Foster</a>
 		{{ if ne .Page.Type "page" }}
 		<span>/</span>
-		<a href=" {{ .Site.BaseURL }}{{ .Page.Type }}">{{ .Page.Type }}</a>
+		<a href=" {{ .Site.BaseURL }}/{{ .Page.Type }}">{{ .Page.Type }}</a>
 		{{end}}
 		{{ if ne .Content "" }}
 		<span>/</span>
