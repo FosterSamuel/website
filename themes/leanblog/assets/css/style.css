@@ -53,6 +53,12 @@ main, article {
   margin: auto;
 }
 
+.intro + section {
+  clear: both;
+  margin-top: var(--s2);
+  margin-bottom: var(--s2);
+}
+
 h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
   margin: var(--s3) 0 var(--s0);
 }
