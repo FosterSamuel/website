@@ -93,6 +93,17 @@ figcaption {
   margin: 0 0 var(--s2) 0;
 } 
 
+.heading-anchor {
+  text-decoration: none;
+  vertical-align: middle;
+  padding-left: var(--s-4);
+}
+
+.heading-anchor svg {
+  fill: blue; /* fallback */
+  fill: -webkit-link;
+}
+
 a[rel="next"] {
   display: block;
   margin-bottom: var(--s0);

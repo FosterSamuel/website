@@ -1,0 +1,11 @@
+<!-- Thanks to Nilesh Kevlani, who posted this solution on Hugo's discourse forum: 
+        https://discourse.gohugo.io/t/adding-anchor-next-to-headers/1726/24 
+-->
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+    {{ .Text | safeHTML }}
+    <a class="heading-anchor" href="#{{ .Anchor | safeURL }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+            <path d="M17.03 6.97a1.5 1.5 0 0 1 0 2.1l-7.95 7.96a1.5 1.5 0 0 1-2.11-2.1l7.95-7.96a1.5 1.5 0 0 1 2.11 0zM7.9 20.35a3 3 0 0 1-4.25-4.25l5.64-5.63A5.77 5.77 0 0 0 3.84 12l-2.15 2.15a5.77 5.77 0 0 0 8.16 8.16L12 20.16a5.77 5.77 0 0 0 1.53-5.45L7.9 20.35zM14.15 1.7 12 3.84a5.76 5.76 0 0 0-1.53 5.44l5.63-5.63a3 3 0 0 1 4.25 4.25l-5.63 5.63A5.75 5.75 0 0 0 20.16 12l2.15-2.15a5.77 5.77 0 0 0-8.16-8.16z"/>
+          </svg>
+    </a>
+</h{{ .Level }}>
