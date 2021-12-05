@@ -13,6 +13,10 @@
   --s5: calc(var(--s4) * var(--ratio));
   --measure: 80ch;
   --regular-text: 1.25rem;
+  --black: #060606;
+  --grey: #52545d;
+  --codeBackground: #272822;
+  --codeVariable: #f8f8f2;
 }
 
 html {
@@ -65,6 +69,7 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
 
 [time] {
   font-size: .95rem;
+  color: var(--grey);
 }
 
 p {
@@ -93,7 +98,15 @@ figcaption {
 .highlight {
   margin: 0 0 var(--s2) 0;
   width: 100%;
-} 
+}
+
+p > code {
+  background-color: var(--codeBackground);
+  color: var(--codeVariable);
+  font-size: .9rem;
+  padding: var(--s-5) var(--s-2);
+  border-radius: 4px;
+}
 
 .heading-anchor {
   text-decoration: none;
