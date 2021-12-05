@@ -25,10 +25,10 @@ A third-level building, the winning height for a worker, can be blocked by build
 
 ### Building my version
 
-My first goal was to minimize my time managing board state. Thankfully, every action in Santorini can be reduced to two numbers: the `row` and `column` where a move or build happened. I wanted to throw only row-column pairs at something to play the game. `playPosition` does just that:
+My first goal was to minimize my time managing board state. Thankfully, every action in Santorini can be reduced to two numbers: the row and column where a move or build happened. I wanted to throw only row-column pairs at something to play the game. `playPosition` does just that:
 
 ```js
-playPosition(row, column) {
+function playPosition(row, column) {
 		// ...
 		if(isOutsideBoard(row, column)) {
 			return false;
