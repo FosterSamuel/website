@@ -80,6 +80,7 @@ img {
 
 figure {
   margin: var(--s2) 0;
+  width: 100%;
 }
 
 figcaption {
@@ -91,6 +92,7 @@ figcaption {
 
 .highlight {
   margin: 0 0 var(--s2) 0;
+  width: 100%;
 } 
 
 .heading-anchor {
@@ -124,6 +126,14 @@ a[rel="next"] {
 @media(max-width: 620px) {
   :root {
     --regular-text: 1rem;
+  }
+
+  main, article {
+    padding: 0;
+  }
+
+  main, article > *:not(figure):not(.highlight) {
+    padding: 0 var(--s0) var(--s1) var(--s0);
   }
 
   .intro p {
