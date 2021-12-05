@@ -3,7 +3,7 @@ HUGO_VERSION = "0.71.0"
 HUGO_ENV = "production"
 
 [[redirects]]
-  from = "https://fostersamuel.com/blog/*"
-  to = "https://www.fostersamuel.com/blog/*"
+  from = "https://fostersamuel.com/*"
+  to = "https://www.fostersamuel.com/:splat"
   status = 200
   force = true
