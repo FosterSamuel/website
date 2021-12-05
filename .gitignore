@@ -1,6 +1,5 @@
 node_modules/
 .sass-cache
-.jekyll-metadata
 _site/
 _drafts/
 _site/
