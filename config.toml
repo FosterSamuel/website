@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Samuel Foster"
 theme = "leanblog"
 summaryLength = 3
+[blackfriday]
+  hrefTargetBlank = true
 [markup]
   [markup.highlight]
     codeFences = true
