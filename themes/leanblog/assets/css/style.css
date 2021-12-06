@@ -100,13 +100,14 @@ figcaption {
   width: 100%;
 }
 
-p > code {
+* > code {
   background-color: var(--codeBackground);
   color: var(--codeVariable);
   font-size: .9rem;
   padding: var(--s-5) var(--s-2);
   border-radius: 4px;
   vertical-align: text-top;
+  margin-right: var(--s-5);
 }
 
 .heading-anchor {
