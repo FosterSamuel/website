@@ -80,7 +80,7 @@ Let's convert the following board state into the 131 bit format. Player one is b
 
 Because it's the first player's turn, we will set the first bit to 0.
 
-<pre>0</pre>
+`0`
 
 Next are the worker positions. Player one's first worker is on square 6 and their second worker is on square 14. Player's two are on 1 and 12, respectively. In binary:
 
@@ -91,7 +91,7 @@ Next are the worker positions. Player one's first worker is on square 6 and thei
 
 Adding those we get:
 
-<pre>0 00110 01110 00001 01100</pre>
+`0 00110 01110 00001 01100`
 
 The following 15 bits are for building counts. We have 1 Shop, 8 Homes, and 1 Dome.
 
@@ -99,7 +99,7 @@ The following 15 bits are for building counts. We have 1 Shop, 8 Homes, and 1 Do
 - 8 = 01000
 - 1 = 00001
 
-<pre>0 00110 01110 00001 01100 00001 01000 00001</pre>
+`0 00110 01110 00001 01100 00001 01000 00001`
 
 Now for the last bits: all building positions. The first Shop is on available square 4 or 00100. With that stored, the Homes are found on:
 
@@ -114,8 +114,7 @@ Now for the last bits: all building positions. The first Shop is on available sq
 
 The final Dome is at the 10th position, allowing us to drop a bit to represent it among the 16 available squares left. We find it on available square 9 for our final 4 bits of 1001.
 
-<pre>0 00110 01110 00001 01100 00001 01000 00001 00100 00001</pre>
-<pre>00100 00101 00111 00111 00111 00111 01001 1001</pre>
+`0 00110 01110 00001 01100 00001 01000 00001 00100 00001 00100 00101 00111 00111 00111 00111 01001 1001`
 
 The example fits in a tidy 85 bits!
 
