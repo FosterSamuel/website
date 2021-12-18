@@ -15,8 +15,8 @@
   --regular-text: 1.25rem;
   --black: #060606;
   --grey: #52545d;
-  --codeBackground: #272822;
-  --codeVariable: #f8f8f2;
+  --codeBackground: #cfcfcf;
+  --codeVariable: #444444;
 }
 
 html {
@@ -51,7 +51,8 @@ nav > * {
   text-transform: capitalize;
 }
 
-main, article {
+main,
+article {
   max-width: var(--measure);
   padding: 0 var(--s0) var(--s1) var(--s0);
   margin: auto;
@@ -63,18 +64,24 @@ main, article {
   margin-bottom: var(--s2);
 }
 
-h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
   margin: var(--s3) 0 var(--s0);
 }
 
 [time] {
-  font-size: .95rem;
+  font-size: 0.95rem;
   color: var(--grey);
 }
 
 p {
   margin: 0;
   padding: 0.65em 0;
+}
+
+li {
+  margin-left: var(--s2);
 }
 
 img {
@@ -90,6 +97,7 @@ figure {
 
 figcaption {
   font-size: 1rem;
+  color: var(--grey);
   max-width: 100%;
   text-align: center;
   padding: var(--s-2) 0;
@@ -100,11 +108,11 @@ figcaption {
   width: 100%;
 }
 
-* > code {
+*:not(pre) > code {
   background-color: var(--codeBackground);
   color: var(--codeVariable);
-  font-size: .9rem;
-  padding: var(--s-5) var(--s-2);
+  font-size: 0.9rem;
+  padding: var(--s-5) var(--s-3);
   border-radius: 4px;
   vertical-align: text-top;
   margin-right: var(--s-5);
@@ -138,16 +146,18 @@ a[rel="next"] {
   opacity: 0;
 }
 
-@media(max-width: 620px) {
+@media (max-width: 850px) {
   :root {
     --regular-text: 1rem;
   }
 
-  main, article {
+  main,
+  article {
     padding: 0;
   }
 
-  main, article > *:not(figure):not(.highlight) {
+  main,
+  article > *:not(figure):not(.highlight):not(.game) {
     padding: 0 var(--s0) var(--s1) var(--s0);
   }
 
@@ -157,5 +167,9 @@ a[rel="next"] {
 
   .intro p {
     padding-top: 0;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
   }
 }
