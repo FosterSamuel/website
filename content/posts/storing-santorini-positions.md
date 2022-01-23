@@ -93,15 +93,19 @@ Adding those we get:
 
 `0 00110 01110 00001 01100`
 
-The following 15 bits are for building counts. We have 1 Shop, 8 Homes, and 1 Dome.
+The following 15 bits are for building counts. We have 1 Shop, 8 Homes, and 0 Towers.
 
 - 1 = 00001
 - 8 = 01000
-- 1 = 00001
+- 0 = 00000
 
-`0 00110 01110 00001 01100 00001 01000 00001`
+`0 00110 01110 00001 01100 00001 01000 00000`
 
-Now for the last bits: all building positions. The first Shop is on available square 4 or 00100. With that stored, the Homes are found on:
+Now for the last bits: all building positions. The first Shop is on available square 4 or 00100. 
+
+`0 00110 01110 00001 01100 00001 01000 00000 00100`
+
+With that stored, the Homes are found on:
 
 - Available square 1 = 00001
 - Available square 4 = 00100
@@ -112,9 +116,9 @@ Now for the last bits: all building positions. The first Shop is on available sq
 - Available square 7 = 00111
 - Available square 9 = 01001
 
-The final Dome is at the 10th position, allowing us to drop a bit to represent it among the 16 available squares left. We find it on available square 9 for our final 4 bits of 1001.
+The final Dome is at the 10th position, allowing us to drop a bit to represent it among the 16 available squares left. We find it on available square 9 for our final 4 bits of 1001. Because we had the count of Shops, Homes, and Towers, we are able to assume any remaining positions are for domes.
 
-`0 00110 01110 00001 01100 00001 01000 00001 00100 00001 00100 00101 00111 00111 00111 00111 01001 1001`
+`0 00110 01110 00001 01100 00001 01000 00000 00100 00001 00100 00101 00111 00111 00111 00111 01001 1001`
 
 The example fits in a tidy 85 bits!
 
