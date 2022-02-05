@@ -5,3 +5,5 @@ _drafts/
 _site/
 docs/_drafts/
 .hugo_build.lock
+
+.vercel
