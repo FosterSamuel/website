@@ -46,7 +46,7 @@ nav {
   margin-right: auto;
 }
 
-nav > * {
+nav>* {
   margin: 0 var(--s-2) 0 0;
   text-transform: capitalize;
 }
@@ -58,7 +58,7 @@ article {
   margin: auto;
 }
 
-.intro + section {
+.intro+section {
   clear: both;
   margin-top: var(--s2);
   margin-bottom: var(--s2);
@@ -75,7 +75,8 @@ h3:not(:first-child) {
   color: var(--grey);
 }
 
-p {
+p,
+iframe {
   margin: 0;
   padding: 0.65em 0;
 }
@@ -108,7 +109,7 @@ figcaption {
   width: 100%;
 }
 
-*:not(pre) > code {
+*:not(pre)>code {
   background-color: var(--codeBackground);
   color: var(--codeVariable);
   font-size: 0.9rem;
@@ -125,7 +126,8 @@ figcaption {
 }
 
 .heading-anchor svg {
-  fill: blue; /* fallback */
+  fill: blue;
+  /* fallback */
   fill: -webkit-link;
 }
 
@@ -157,11 +159,11 @@ a[rel="next"] {
   }
 
   main,
-  article > *:not(figure):not(.highlight):not(.game) {
+  article>*:not(figure):not(.highlight):not(iframe) {
     padding: 0 var(--s0) var(--s1) var(--s0);
   }
 
-  p > code {
+  p>code {
     vertical-align: baseline;
   }
 

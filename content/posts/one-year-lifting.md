@@ -85,9 +85,9 @@ But I kept showing up. After weeks and weeks of failing I eventually broke the b
 
 Here's an early 2020 video of my trying to deadlift followed by a video of the 450 pound deadlift:
 
-<iframe width="95%" height="615" src="https://www.youtube-nocookie.com/embed/dgqJTqYx18w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="615" src="https://www.youtube-nocookie.com/embed/dgqJTqYx18w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="95%" height="615" src="https://www.youtube-nocookie.com/embed/tq01Zlpghhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="615" src="https://www.youtube-nocookie.com/embed/tq01Zlpghhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Four seconds into the 450 video, you can hear and see me brace myself by breathing in, tightening my core, pulling my lats down, sitting back, and grabbing the ground with my feet. As I stand up I am driving my knees out and glutes forward. These tiny form details helped me tackle front and back squat.
 
@@ -104,7 +104,7 @@ The variety, again, helped me hone the form and get stronger. We started with fr
 
 The 406 pound personal best was a box squat, a variant where you let go of all elastic tension before standing up. Each side had 25 pounds in chains that pooled and became 0 pounds when at the bottom of the squat. At the top the true weight was 456 pounds.
 
-<iframe width="95%" height="615" src="https://www.youtube-nocookie.com/embed/rC1SgB-7QEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="615" src="https://www.youtube-nocookie.com/embed/rC1SgB-7QEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I breathed in, jammed myself into the bar while under it, and stood straight up. Then I took slow steps backward, angled my feet out for the squat, and rebraced. On the way down I am focused on grabbing the ground with my feet and driving my knees out. Same on the way up with the addition of firing my glutes, hamstrings, and quads as hard as I could. Even if I cannot move fast due to the weight I learned to always move with the intent of speed. There's only so much fuel in the tank to "get out of the hole."
 

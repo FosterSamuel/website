@@ -16,7 +16,7 @@ Enter Roblox, the funky, sometimes-blocky, 3D platform. In 2008 the platform dan
 Roblox has a robust marketplace of free objects, scripts, and plugins. One plugin is [Moon Animator 2](https://www.roblox.com/library/4725618216/Moon-Animator-2), and after watching [a tutorial video on the basics](https://www.youtube.com/watch?v=q8tGNMo_jHg), I set out today to do a quick screen test. I recorded the game with [OBS](https://obsproject.com/) by following [this tutorial](https://www.youtube.com/watch?v=J-So34WSbUQ).
 
 Here it is:
-<iframe width="95%" height="615" src="https://www.youtube-nocookie.com/embed/KNMjdN_ZSFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="500px" src="https://www.youtube-nocookie.com/embed/KNMjdN_ZSFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I especially like the last part of the test. A dark screen makes easy transitions between explanations with chroma keying.
 
