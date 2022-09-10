@@ -1,18 +1,25 @@
 ---
 title: "Food Storage"
 date: 2022-09-07T22:21:48-07:00
+lastmod: 2022-09-09T20:00:00-00:00
 draft: false
 ---
+Stress around food storage can stop us from cooking a new recipe or from enjoying leftovers. To change this I am tracking how to store each kind of food. 
 
-*Disclaimer: this is based on my own reading and experiences. For reviewed literature, the Institute of Agriculture and Natural Resources at UNL has a page on [food storage](https://food.unl.edu/free-resource/food-storage). Also, the U.S. Department of Health and Human Services runs foodsafety.gov, which has [helpful tips on food safety](https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety).*
+Each method is based on my own reading and experiences, and I recommend seeking [reviewed literature](#reviewed-literature) if looking for health and safety rigor.
 
-Stress around food storage limits variety in the kitchen. To change this I am tracking how to store each kind of food. 
-
+- [Carrots, chopped](#carrots-chopped)
 - [Carrots, raw](#carrots-raw)
 - [Herbs](#herbs)
 
-### Carrots, raw
+### Carrots, chopped
+1. Wash and dry carrots
+2. Fill container with an inch of water
+3. Put carrots in water and place lid on container
+4. Every 3-5 days drain the water and refill
+5. Store in fridge for up to 3 weeks
 
+### Carrots, raw
 1. Do not wash
 2. Wipe dust and residue water off carrots
 3. Place carrots in airtight bag or container with clean kitchen towel 
@@ -38,3 +45,6 @@ Tender herbs like Basil, Cilantro, Dill, Mint, Parsely, and Tarragon:
 
 J. Kenji López-Alt wrote [a handy herb table for Serious Eats](https://www.seriouseats.com/the-best-way-to-store-fresh-herbs-parsley-cilantro-dill-basil#:~:text=of%20direct%20sunlight.-,Herb,-Herb%20Type%C2%A0) with types and storage times.
 
+
+### Reviewed Literature
+The Institute of Agriculture and Natural Resources at UNL has a page on [food storage](https://food.unl.edu/free-resource/food-storage). Also, the U.S. Department of Health and Human Services runs foodsafety.gov, which has [helpful tips on food safety](https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety).
