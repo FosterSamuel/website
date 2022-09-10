@@ -13,6 +13,7 @@ Each method is based on my own reading and experiences, and I recommend seeking 
 - [Herbs](#herbs)
 
 ### Carrots, chopped
+
 1. Wash and dry carrots
 2. Fill container with an inch of water
 3. Put carrots in water and place lid on container
@@ -20,12 +21,14 @@ Each method is based on my own reading and experiences, and I recommend seeking 
 5. Store in fridge for up to 3 weeks
 
 ### Carrots, raw
+Optionally, green ends can be snipped off and [stored as hardy herbs.](#loose-herbs)
+
 1. Do not wash
 2. Wipe dust and residue water off carrots
 3. Place carrots in airtight bag or container with clean kitchen towel 
 4. Store in fridge for up to 3 months
 
-Optionally, green ends can be snipped off and [stored as hardy herbs.](#loose-herbs)
+
 
 ### Herbs
 
