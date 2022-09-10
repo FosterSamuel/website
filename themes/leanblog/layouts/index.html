@@ -1,10 +1,12 @@
 {{ define "main" }}
 <main>
+	<h1 class="hidden">Samuel Foster</h1>
 	<section class="intro">
 		<h2 class="hidden">Introduction</h2>
 		<img width="125px" height="125px" class="profile-image" src="../../images/profile.jpg" loading="lazy" />
-		<p>Hi — I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Reach me on <a
-				href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a> or Twitter
+		<p>Hi, I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Reach me
+			on <a href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a> or
+			Twitter
 			<a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel</a>.
 		</p>
 	</section>
@@ -19,7 +21,7 @@
 	<section>
 		<h2>Notes</h2>
 		{{ range first 3 (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
-		{{ .Render "title" }}
+		{{ .Render "note-title" }}
 		{{ end }}
 		...and <a href="/notes">{{ sub (len (where .Site.Pages "Section" "notes")) 4 }} others &rarr;</a>
 	</section>

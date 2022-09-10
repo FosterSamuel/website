@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.LanguageCode | default " en-us" }}">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,20 +14,21 @@
 	<link rel="manifest" href="/site.webmanifest">
 
 	<title>{{ .Title }}</title>
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.description }}
+	<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}
+	<meta name="author" content="{{ . }}">{{ end }}
 	{{ $styles := resources.Get "css/style.css" | minify }}
 	<link rel="stylesheet" href="{{ $styles.Permalink }}">
 	{{ with .OutputFormats.Get "RSS" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{ printf `
+	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 </head>
+
 <body>
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
-	{{if ne .Type "page"}}
-		<img style="border-radius: 50%; max-width: 175px; margin:  1rem auto auto auto;" src="../../images/profile.jpg" loading="lazy" />
-		<p style="text-align: center; margin-bottom: 2rem;">Message me on Twitter <a href="https://www.twitter.com/@FasterSamuel" target="_blank" rel="nofollow">@FasterSamuel</a>.</p>
-	{{end}}
 </body>
+
 </html>

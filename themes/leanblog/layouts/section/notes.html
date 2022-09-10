@@ -1,10 +1,9 @@
 {{ define "main" }}
 {{.Content}}
 <main>
-	<h2>Notes</h2>
-    <p>In order of last updated:</p>
+    <h2>Notes</h2>
     {{ range (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
-        {{ .Render "title"}}
+    {{ .Render "note-title-dated"}}
     {{ end }}
 </main>
 {{ end }}
