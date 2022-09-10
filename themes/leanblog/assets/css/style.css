@@ -117,12 +117,12 @@ li {
   break-inside: avoid-column;
 }
 
-li::marker {
-  font-family: monospace;
+li:last-child {
+  margin-bottom: 1.5rem;
 }
 
-ol li:last-of-type {
-  margin-bottom: 1rem;
+li::marker {
+  font-family: monospace;
 }
 
 img {
