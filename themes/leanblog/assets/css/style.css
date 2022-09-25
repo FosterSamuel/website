@@ -35,6 +35,7 @@ body {
   width: 100%;
   position: relative;
   margin: auto;
+  overflow-y: scroll;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
