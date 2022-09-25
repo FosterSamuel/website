@@ -12,14 +12,6 @@
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 html {
   height: 100%;
   font-size: max(min(2vw, 1.5rem), 1rem);
@@ -48,15 +40,26 @@ figcaption,
   margin-bottom: 1.5rem;
 }
 
+a {
+  text-underline-offset: 1.75px;
+  text-decoration-thickness: 1.75px;
+}
+
 .heading-anchor {
+  transition: 150ms all ease-in-out;
+  transition-property: color, fill, transform;
   color: inherit;
   fill: transparent;
+  text-decoration: none;
 }
 
 .heading-anchor:hover {
   color: var(--grey);
-  text-decoration: none;
   fill: var(--grey);
+}
+
+.heading-anchor svg {
+  margin-left: .25rem;
 }
 
 h2 {
