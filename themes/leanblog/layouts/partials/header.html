@@ -2,7 +2,8 @@
 <header>
 	<nav>
 		<h2 class="hidden">Website Navigation</h2>
-		<a href="{{ .Site.BaseURL }}">Samuel Foster</a>{{ if ne .Page.Type "page" }}<span>/</span>{{end}}{{ if ne
+		<a href="{{ .Site.BaseURL }}" {{ if eq .Page.Type "page" }} class="hidden" {{ end }}>Samuel Foster</a>{{ if ne
+		.Page.Type "page" }}<span>/</span>{{end}}{{ if ne
 		.Content "" }}<a href=" {{ .Site.BaseURL }}/{{ .Page.Type }}">{{ .Page.Type }}</a><span>/</span>{{end}}
 	</nav>
 </header>

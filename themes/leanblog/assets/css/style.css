@@ -40,11 +40,6 @@ figcaption,
   margin-bottom: 1.5rem;
 }
 
-a {
-  text-underline-offset: 1.75px;
-  text-decoration-thickness: 2px;
-}
-
 .heading-anchor {
   transition: 150ms all ease-in-out;
   transition-property: color, fill, transform;
