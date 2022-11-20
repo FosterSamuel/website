@@ -42,7 +42,7 @@ figcaption,
 
 a {
   text-underline-offset: 1.75px;
-  text-decoration-thickness: 1.75px;
+  text-decoration-thickness: 2px;
 }
 
 .heading-anchor {
@@ -64,7 +64,6 @@ a {
 
 h2 {
   font-size: var(--h2);
-  margin-bottom: 0.75rem;
 }
 
 h3 {
@@ -150,10 +149,11 @@ figcaption {
   text-align: center;
 }
 
-.intro+section {
+.intro+section,
+.intro+section~section {
   clear: both;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .profile-image {
