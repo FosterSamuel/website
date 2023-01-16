@@ -10,13 +10,6 @@
 		</p>
 	</section>
 	<section>
-		<h2>Newsletter</h2>
-		<p>I'm at the early middle of my cooking journey. I feel useful in the kitchen, but I don't feel dangerous. I
-			write a free newsletter about my experience and what I'm learning called <a
-				href="https://www.thekitchenpare.com/">The
-				Kitchen Pare.</a></p>
-	</section>
-	<section>
 		<h2>Posts</h2>
 		{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
 		{{ .Render "summary" }}
