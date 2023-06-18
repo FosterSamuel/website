@@ -133,6 +133,11 @@ figure {
   width: 100%;
 }
 
+dfn {
+  font-style: normal;
+  font-weight: bold;
+}
+
 figure img {
   margin-bottom: 0.375rem;
 }
