@@ -5,7 +5,7 @@ draft: false
 summary: Tackling the thirteenth Project Euler problem.
 ---
 
-<a class="post-writtenLink" href="https://projecteuler.net" rel="noopener" target="_blank">Project Euler</a> hosts over 600 interesting math programming problems. <a class="post-writtenLink" href="https://projecteuler.net/problem=13" rel="noopener" target="_blank">Problem thirteen</a>  asks for the first ten digits of the sum of  equally-sized large numbers. The page offers these massive numbers:
+<a href="https://projecteuler.net" rel="noopener" target="_blank">Project Euler</a> hosts over 600 interesting math programming problems. <a href="https://projecteuler.net/problem=13" rel="noopener" target="_blank">Problem thirteen</a>  asks for the first ten digits of the sum of  equally-sized large numbers. The page offers these massive numbers:
 
 ```js
 37107287533902102798797998220837590246510135740250
@@ -139,7 +139,7 @@ Timing in seconds:
 | 10,000     |   |   |  31.54  |   |   | 0.12   |
 |            |   |   |         |   |   |        |
 
-According to this <a class="post-writtenLink" href="https://stackoverflow.com/a/24578976" rel="noopener" target="_blank">helpful StackOverflow comment</a>, Python does not interpret to compute ```sum()```. There is, however, an even faster solution. Check out <a class="post-writtenLink" href="https://stackoverflow.com/a/24579773" target="_blank" rel="noopener">this answer</a> covering the use of Numpy to beat ```sum()```'s timing.
+According to this <a  href="https://stackoverflow.com/a/24578976" rel="noopener" target="_blank">helpful StackOverflow comment</a>, Python does not interpret to compute ```sum()```. There is, however, an even faster solution. Check out <a  href="https://stackoverflow.com/a/24579773" target="_blank" rel="noopener">this answer</a> covering the use of Numpy to beat ```sum()```'s timing.
 
 ### What I Learned
 
@@ -148,4 +148,4 @@ Don't immediately doubt bruteforcing. Keep it simple.
 The answer to the problem is 5537376230.
 
 
-See all <a class="post-writtenLink" href="https://projecteuler.net/archives" rel="noopener" target="_blank">Project Euler problems.</a>
+See all <a  href="https://projecteuler.net/archives" rel="noopener" target="_blank">Project Euler problems.</a>

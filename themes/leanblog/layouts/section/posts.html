@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{.Content}}
-<main>
-	<h2>Posts</h2>
-	{{ range (.Pages.GroupByDate "2006") }}
-	<section>
+<main class="stack">
+    <h2>Posts</h2>
+    {{ range (.Pages.GroupByDate "2006") }}
+    <section class="stack stack-small">
         <h3>{{ .Key }}</h3>
         {{ range .Pages }}
-            {{ .Render "summary"}}
+        {{ .Render "summary"}}
         {{ end }}
     </section>
     {{ end }}

@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{.Content}}
-<main>
+<main class="stack stack-small">
     <h2>Notes</h2>
     {{ range (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
     {{ .Render "note-title-dated"}}

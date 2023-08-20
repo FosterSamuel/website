@@ -1,9 +1,8 @@
-<h1 class="hidden">Samuel Foster</h1>
-<header>
+<header {{ if eq .Page.Type "page" }} class="hidden" {{ end }}>
 	<nav>
-		<h2 class="hidden">Website Navigation</h2>
-		<a href="{{ .Site.BaseURL }}" {{ if eq .Page.Type "page" }} class="hidden" {{ end }}>Samuel Foster</a>{{ if ne
+		<a href="{{ .Site.BaseURL }}"><h1>Samuel Foster</h1></a>{{ if ne
 		.Page.Type "page" }}<span>/</span>{{end}}{{ if ne
-		.Content "" }}<a href=" {{ .Site.BaseURL }}/{{ .Page.Type }}">{{ .Page.Type }}</a><span>/</span>{{end}}
+		.Content "" }}<a href=" {{ .Site.BaseURL }}/{{ .Page.Type }}">{{ strings.FirstUpper .Page.Type
+			}}</a><span>/</span>{{end}}
 	</nav>
 </header>

@@ -1,27 +1,25 @@
 {{ define "main" }}
-<main>
-	<h1 class="hidden">Samuel Foster</h1>
-	<section class="intro">
+<main class="stack">
+	<section class="intro stack">
 		<h2 class="hidden">Introduction</h2>
-		<img width="125px" height="125px" class="profile-image" src="../../images/profile.jpg" loading="lazy" />
-		<p>Hi, I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Reach me
-			on <a href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a>.
+		<img width="125px" height="125px" src="../../images/profile.jpg" loading="lazy" />
+		<p>Hi, I'm Samuel Foster, a software engineer passionate about cooking, running, and learning. Reach me on <a
+				href="https://www.linkedin.com/in/samuel-foster" target="_blank" rel="nofollow">LinkedIn</a>.
 		</p>
 	</section>
-	<section>
+	<section class="stack stack-small">
 		<h2>Posts</h2>
 		{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
 		{{ .Render "summary" }}
 		{{ end }}
-		...
-		and <a href="/posts">{{ sub (len (where .Site.Pages "Section" "posts")) 4 }} more &rarr;</a>
+		<p>...and <a href="/posts">{{ sub (len (where .Site.Pages "Section" "posts")) 4 }} more &rarr;</a></p>
 	</section>
-	<section>
+	<section class="stack stack-small">
 		<h2>Notes</h2>
 		{{ range first 3 (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
 		{{ .Render "note-title" }}
 		{{ end }}
-		...and <a href="/notes">{{ sub (len (where .Site.Pages "Section" "notes")) 4 }} others &rarr;</a>
+		<p>...and <a href="/notes">{{ sub (len (where .Site.Pages "Section" "notes")) 4 }} others &rarr;</a></p>
 	</section>
 </main>
 {{ end }}

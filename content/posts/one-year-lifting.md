@@ -36,19 +36,19 @@ In my best running shape I weighed 150 pounds. With the end of college stress I 
 Moving heavy stuff is taxing, and I needed more food. I ate consistently and had one cheat meal each weekend.
 
 <figure>
-	<img loading="lazy" width="248" alt="Weight from 2020 to 2021." src="../../images/lifting/weight.PNG">
+	<img class="inv" loading="lazy" width="248" alt="Weight from 2020 to 2021." src="../../images/lifting/weight.PNG">
 	<figcaption>Weight from 2020 to 2021.</figcaption>
 </figure>
 
 I ate around "maintenance" until Feburary, which is when I decided to bulk. By the end of June I capped at a weight of 181. After that I did a cut for summer and landed at 173. The thing that blew my mind was I'd hit similar weights and be a completely different body composition. The number didn't matter -- what I could do with it did.
 
 <figure>
-	<img loading="lazy" width="248" alt="Body composition from 2020 to 2021." src="../../images/lifting/composition.PNG">
+	<img class="inv" loading="lazy" width="248" alt="Body composition from 2020 to 2021." src="../../images/lifting/composition.PNG">
 	<figcaption>Body composition from 2020 to 2021.</figcaption>
 </figure>
 
 <figure>
-	<img loading="lazy" width="248" alt="Body fat percentage from 2020 to 2021." src="../../images/lifting/bodyfat.PNG">
+	<img class="inv" loading="lazy" width="248" alt="Body fat percentage from 2020 to 2021." src="../../images/lifting/bodyfat.PNG">
 	<figcaption>Body fat percentage from 2020 to 2021.</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ To bench I needed more active chest and triceps. The training plan had me doing 
 
 I also didn't just do straight bench. We did different inclines, bar shapes, grip spacings, and timed presses. The variance helped a ton.
 <figure>
-	<img loading="lazy" width="248" alt="Bench Press 1 Rep Max from 2020 to 2021. Low of 95 pounds and personal best of 195 pounds." src="../../images/lifting/benchpress.PNG">
+	<img class="inv" loading="lazy" width="248" alt="Bench Press 1 Rep Max from 2020 to 2021. Low of 95 pounds and personal best of 195 pounds." src="../../images/lifting/benchpress.PNG">
 	<figcaption>Bench Press 1 Rep Max from 2020 to 2021. Low of 95 pounds and personal best of 195 pounds.</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ Jake never made me do a deadlift I couldn't do, so we'd cut short as soon as my 
 But I kept showing up. After weeks and weeks of failing I eventually broke the barrier and pushed to 430 and then 450. I felt over the moon.
 
 <figure>
-	<img loading="lazy" width="248" alt="Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 275 pounds and personal best of 450 pounds." src="../../images/lifting/deadlift.PNG">
+	<img class="inv" loading="lazy" width="248" alt="Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 275 pounds and personal best of 450 pounds." src="../../images/lifting/deadlift.PNG">
 	<figcaption>Trap Bar Deadlift 1 Rep Max from 2020 to 2021. Low of 275 pounds and personal best of 450 pounds.</figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ When I started I could not do a single bodyweight squat without falling over. Th
 The variety, again, helped me hone the form and get stronger. We started with front squat and transitioned to back squat in the beginning of 2021. Out of all the movements I enjoyed back squats the most.
 
 <figure>
-	<img loading="lazy" width="248" alt="Front and Back Squat 1 Rep Max from 2020 to 2021. Low of 65 pounds on front and 215 pounds on back with respective personal bests of 205 pounds and 406 pounds." src="../../images/lifting/squat.PNG">
+	<img class="inv" loading="lazy" width="248" alt="Front and Back Squat 1 Rep Max from 2020 to 2021. Low of 65 pounds on front and 215 pounds on back with respective personal bests of 205 pounds and 406 pounds." src="../../images/lifting/squat.PNG">
 	<figcaption>Front and Back Squat 1 Rep Max from 2020 to 2021. Low of 65 pounds on front and 215 pounds on back with respective personal bests of 205 pounds and 406 pounds.</figcaption>
 </figure>
 
@@ -111,7 +111,7 @@ I breathed in, jammed myself into the bar while under it, and stood straight up.
 ### Final stats
 
 <figure>
-	<img loading="lazy" width="248" alt="All previous graphs combined." src="../../images/lifting/finalstats.PNG">
+	<img class="inv" loading="lazy" width="248" alt="All previous graphs combined." src="../../images/lifting/finalstats.PNG">
 </figure>
 
  - **Bench press:** 95 pounds to 195 pounds (+100)

@@ -15,7 +15,7 @@ Action dictates data and program flow. In my old *Liberty BASIC* programs, I fee
 
 Maybe one day I will learn it again, but for now, I am focused on Python. 
 
-Without action, our data from <a target="_blank" class="post-writtenLink" href="https://www.fostersamuel.com/blog/learning-python-data">the last post</a> will sit and collect imaginary dust. To counter this would require ways to access, change, and use our data.   
+Without action, our data from <a target="_blank"  href="https://www.fostersamuel.com/blog/learning-python-data">the last post</a> will sit and collect imaginary dust. To counter this would require ways to access, change, and use our data.   
 
 
 

@@ -18,7 +18,7 @@
 	<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}
 	<meta name="author" content="{{ . }}">{{ end }}
-	{{ $styles := resources.Get "css/style.css" | minify }}
+	{{ $styles := resources.Get "css/style.css" | resources.Minify }}
 	<link rel="stylesheet" href="{{ $styles.Permalink }}">
 	{{ with .OutputFormats.Get "RSS" -}}
 	{{ printf `
@@ -27,8 +27,10 @@
 </head>
 
 <body>
-	{{ partial "header" . }}
-	{{ block "main" . }}{{ end }}
+	<div class="center stack">
+		{{ partial "header" . }}
+		{{ block "main" . }}{{ end }}
+	</div>
 </body>
 
 </html>

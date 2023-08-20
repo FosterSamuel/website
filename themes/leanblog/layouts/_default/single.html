@@ -1,5 +1,5 @@
 {{ define "main" }}
-	<article>
+	<article class="stack center">
 		<h2>{{ .Title }}</h2>
 		<p time><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"  }}">{{ .Date.Format "January 2, 2006" }}</time>
 		{{if .Params.wasUpdated}}
@@ -7,7 +7,7 @@
 		{{end}}
 		</p>
 		{{ .Content }}			
-		<footer>
+		<footer class="spaced">
 			{{if .PrevInSection}}
 			<a class="navigate-post-link" rel="prev" href="{{.PrevInSection.RelPermalink}}">&larr;{{ .PrevInSection.Title }}</a>
 			{{end}}
