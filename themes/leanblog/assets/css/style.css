@@ -140,6 +140,21 @@ p>code {
     margin-right: 0.05rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    a {
+        color: rgb(158, 158, 255);
+    }
+
+    a:active {
+        color: rgb(213, 158, 255);
+    }
+
+    .inv,
+    p>code {
+        filter: invert();
+    }
+}
+
 .heading-anchor {
     color: inherit;
     fill: transparent;
@@ -147,18 +162,10 @@ p>code {
 }
 
 .heading-anchor:hover {
-    color: -webkit-link;
-    fill: -webkit-link;
+    color: rgb(158, 158, 255);
+    fill: rgb(158, 158, 255);
 }
 
 .heading-anchor svg {
     margin-left: .25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .inv,
-    p>code {
-        filter: invert();
-    }
 }

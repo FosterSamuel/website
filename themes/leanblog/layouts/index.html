@@ -12,14 +12,14 @@
 		{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
 		{{ .Render "summary" }}
 		{{ end }}
-		<p>...and <a href="/posts">{{ sub (len (where .Site.Pages "Section" "posts")) 4 }} more &rarr;</a></p>
+		<p>and <a href="/posts">{{ sub (len (where .Site.Pages "Section" "posts")) 4 }} more &rarr;</a></p>
 	</section>
 	<section class="stack stack-small">
 		<h2>Notes</h2>
 		{{ range first 3 (where .Site.RegularPages.ByLastmod.Reverse "Section" "notes") }}
 		{{ .Render "note-title" }}
 		{{ end }}
-		<p>...and <a href="/notes">{{ sub (len (where .Site.Pages "Section" "notes")) 4 }} others &rarr;</a></p>
+		<p>and <a href="/notes">{{ sub (len (where .Site.Pages "Section" "notes")) 4 }} others &rarr;</a></p>
 	</section>
 </main>
 {{ end }}
