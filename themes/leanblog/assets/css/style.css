@@ -141,6 +141,11 @@ p>code {
 }
 
 @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #00000b;
+        color: #d6dbe7;
+    }
+
     a {
         color: rgb(158, 158, 255);
     }
@@ -152,6 +157,11 @@ p>code {
     .inv,
     p>code {
         filter: invert();
+    }
+
+    time,
+    [time] {
+        color: #a2a2a2;
     }
 }
 
