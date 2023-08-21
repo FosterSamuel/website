@@ -1,11 +1,17 @@
 ---
 title: "Find New Javascript Libraries"
 date: 2023-08-20T19:27:42-07:00
+lastMod: 2023-08-20T20:10:42-07:00
 draft: false
 summary: Discovery beyond Google and GitHub.
 ---
 
-Learning about new libraries is more than searching Google or GitHub. Below sits a few suggestions for discovery.
+Learning about new libraries is more than searching Google or GitHub. Below are a few suggestions for discovery:
+
+- [Existing libraries](#existing-libraries)
+- [Hacker News](#hacker-news)
+- [Technical blogs](#technical-blogs)
+- [Fellow engineers](#fellow-engineers)
 
 ## Existing libraries
 
